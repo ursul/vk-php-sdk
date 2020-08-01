@@ -2,6 +2,7 @@
 
 namespace VK\TransportClient\Curl;
 
+use CURLFile;
 use VK\TransportClient\TransportClient;
 use VK\TransportClient\TransportClientResponse;
 use VK\TransportClient\TransportRequestException;
@@ -70,7 +71,7 @@ class CurlHttpClient implements TransportClient {
     public function upload(string $url, string $parameter_name, string $path): TransportClientResponse {
         $payload = array();
         $payload[$parameter_name] = (class_exists('CURLFile', false)) ?
-            new \CURLFile($path) : '@' . $path;
+            new CURLFile($path) : '@' . $path;
 
         return $this->sendRequest($url, array(
             CURLOPT_POST       => 1,

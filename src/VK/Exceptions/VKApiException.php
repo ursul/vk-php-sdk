@@ -2,9 +2,10 @@
 
 namespace VK\Exceptions;
 
+use Exception;
 use VK\Client\VKApiError;
 
-class VKApiException extends \Exception
+class VKApiException extends Exception
 {
     /**
      * @var int
