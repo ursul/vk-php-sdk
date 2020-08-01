@@ -38,6 +38,10 @@ use VK\Actions\Utils;
 use VK\Actions\Video;
 use VK\Actions\Wall;
 use VK\Actions\Widgets;
+use VK\Exceptions\Api\VkApiExecuteCodeCompilationException;
+use VK\Exceptions\Api\VkApiExecuteCodeExecutionException;
+use VK\Exceptions\VKApiException;
+use VK\Exceptions\VKClientException;
 
 class VKApiClient {
     protected const API_VERSION = '5.101';
@@ -315,6 +319,23 @@ class VKApiClient {
 
         return $this->docs;
     }
+	
+	/**
+	 * Executes VKScript code.
+	 *
+	 * @param string $access_token
+	 * @param array $params
+	 * - @var string code: VKScript code.
+	 *
+	 * @return mixed
+	 * @throws VKApiException
+	 * @throws VKClientException
+	 * @throws VkApiExecuteCodeCompilationException
+	 * @throws VkApiExecuteCodeExecutionException
+	 */
+	public function execute($access_token, array $params = []) {
+		return $this->request->post('execute', $access_token, $params);
+	}
 
     /**
      * @return Fave

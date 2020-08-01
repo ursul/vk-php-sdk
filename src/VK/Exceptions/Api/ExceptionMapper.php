@@ -37,6 +37,10 @@ class ExceptionMapper {
 		        return new VKApiServerException($error);
 		    case 11:
 		        return new VKApiEnabledInTestException($error);
+		    case 12:
+		        return new VkApiExecuteCodeCompilationException($error);
+		    case 13:
+		        return new VkApiExecuteCodeExecutionException($error);
 		    case 14:
 		        return new VKApiCaptchaException($error);
 		    case 15:
