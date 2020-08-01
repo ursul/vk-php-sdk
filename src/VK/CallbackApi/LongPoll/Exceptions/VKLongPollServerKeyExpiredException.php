@@ -2,6 +2,8 @@
 
 namespace VK\CallbackApi\LongPoll\Exceptions;
 
-class VKLongPollServerKeyExpiredException extends \Exception {
+use Exception;
+
+class VKLongPollServerKeyExpiredException extends Exception {
 
 }

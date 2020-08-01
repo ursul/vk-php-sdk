@@ -8,7 +8,7 @@ This library has been created using the VK API JSON Schema. It can be found [her
 
 ## 1. Prerequisites
 
-* PHP 7.1 or later
+* PHP 7.4 or later
 
 ## 2. Installation
 

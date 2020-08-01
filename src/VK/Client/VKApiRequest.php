@@ -131,12 +131,8 @@ class VKApiRequest {
             $api_error = new VKApiError($error);
             throw ExceptionMapper::parse($api_error);
         }
-
-        if (isset($decode_body[static::KEY_RESPONSE])) {
-            return $decode_body[static::KEY_RESPONSE];
-        } else {
-            return $decode_body;
-        }
+	
+	    return $decode_body[static::KEY_RESPONSE] ?? $decode_body;
     }
 
     /**

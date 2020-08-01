@@ -6,18 +6,14 @@
     "homepage": "https://github.com/VKCOM/vk-php-sdk",
     "license": "MIT",
     "require": {
-        "php": ">=7.1"
+        "php": "^7.4",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6",
-        "vkcom/vk-api-schema": "^5.80.1"
+        "phpunit/phpunit": "^9.2",
+        "vkcom/vk-api-schema": "5.101.0"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/VKCOM/vk-api-schema"
-        }
-    ],
     "autoload": {
         "psr-4": { "VK\\": "src/VK" }
     }

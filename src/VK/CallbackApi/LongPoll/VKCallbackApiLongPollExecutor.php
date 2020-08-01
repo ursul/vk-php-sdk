@@ -45,7 +45,7 @@ class VKCallbackApiLongPollExecutor {
     protected $handler;
     protected $http_client;
     protected $server;
-    protected $last_ts = null;
+    protected $last_ts;
     protected $wait;
 
     /**
