@@ -22,7 +22,7 @@ abstract class VKCallbackApiServerHandler extends VKCallbackApiHandler {
      * @param $event
      */
     public function parse($event) {
-        if ($event->type == static::CALLBACK_EVENT_CONFIRMATION) {
+        if ($event->type === static::CALLBACK_EVENT_CONFIRMATION) {
             $this->confirmation($event->group_id, $event->secret);
         } else {
             $this->parseObject($event->group_id, $event->secret, $event->type, (array) $event->object);
