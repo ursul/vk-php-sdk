@@ -127,7 +127,7 @@ class CurlHttpClient implements TransportClient {
    * @return TransportClientResponse
    */
     protected function parseRawResponse(int $http_status, string $response) {
-        list($raw_headers, $body) = $this->extractResponseHeadersAndBody($response);
+        [$raw_headers, $body] = $this->extractResponseHeadersAndBody($response);
         $headers = $this->getHeaders($raw_headers);
         return new TransportClientResponse($http_status, $headers, $body);
     }
@@ -171,7 +171,7 @@ class CurlHttpClient implements TransportClient {
             if (strpos($line, ': ') === false) {
                 $http_status = $this->getHttpStatus($line);
             } else {
-                list($key, $value) = explode(': ', $line, 2);
+                [$key, $value] = explode(': ', $line, 2);
                 $result[$key] = $value;
             }
         }
