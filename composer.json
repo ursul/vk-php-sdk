@@ -10,15 +10,9 @@
         "ext-curl": "*"
     },
     "require-dev": {
-        "vkcom/vk-api-schema": "^5.80.1"
         "phpunit/phpunit": "^9.2",
+        "vkcom/vk-api-schema": "5.101.0"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/VKCOM/vk-api-schema"
-        }
-    ],
     "autoload": {
         "psr-4": { "VK\\": "src/VK" }
     }
