@@ -25,12 +25,12 @@ class VKApiError {
      * @param array $error
      */
     public function __construct(array $error) {
-        $this->error_code = isset($error[static::KEY_ERROR_CODE]) ? intval($error[static::KEY_ERROR_CODE]) : null;
-        $this->error_msg = isset($error[static::KEY_ERROR_MSG]) ? strval($error[static::KEY_ERROR_MSG]) : null;
-        $this->captcha_sid = isset($error[static::KEY_CAPTCHA_SID]) ? strval($error[static::KEY_CAPTCHA_SID]) : null;
-        $this->captcha_img = isset($error[static::KEY_CAPTCHA_IMG]) ? strval($error[static::KEY_CAPTCHA_IMG]) : null;
-        $this->confirmation_text = isset($error[static::KEY_CONFIRMATION_TEXT]) ? strval($error[static::KEY_CONFIRMATION_TEXT]) : null;
-        $this->redirect_uri = isset($error[static::KEY_REDIRECT_URI]) ? strval($error[static::KEY_REDIRECT_URI]) : null;
+        $this->error_code = isset($error[static::KEY_ERROR_CODE]) ? (int) $error[static::KEY_ERROR_CODE] : null;
+        $this->error_msg = isset($error[static::KEY_ERROR_MSG]) ? (string) $error[static::KEY_ERROR_MSG] : null;
+        $this->captcha_sid = isset($error[static::KEY_CAPTCHA_SID]) ? (string) $error[static::KEY_CAPTCHA_SID] : null;
+        $this->captcha_img = isset($error[static::KEY_CAPTCHA_IMG]) ? (string) $error[static::KEY_CAPTCHA_IMG] : null;
+        $this->confirmation_text = isset($error[static::KEY_CONFIRMATION_TEXT]) ? (string) $error[static::KEY_CONFIRMATION_TEXT] : null;
+        $this->redirect_uri = isset($error[static::KEY_REDIRECT_URI]) ? (string) $error[static::KEY_REDIRECT_URI] : null;
         $this->request_params = isset($error[static::KEY_REQUEST_PARAMS]) ? ((array)$error[static::KEY_REQUEST_PARAMS]) : null;
     }
 
