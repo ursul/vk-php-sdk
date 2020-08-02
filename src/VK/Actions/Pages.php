@@ -10,7 +10,7 @@ use VK\Exceptions\Api\VKApiParamTitleException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Pages
+class Pages extends Action
 {
 	/**
 	 * Allows to clear the cache of particular 'external' pages which may be attached to VK posts.

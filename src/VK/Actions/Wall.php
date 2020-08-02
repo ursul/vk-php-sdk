@@ -19,7 +19,7 @@ use VK\Exceptions\Api\VKApiWallTooManyRecipientsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Wall
+class Wall extends Action
 {
 	/**
 	 * @param string $access_token

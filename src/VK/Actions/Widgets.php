@@ -5,7 +5,7 @@ namespace VK\Actions;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Widgets
+class Widgets extends Action
 {
 	/**
 	 * Gets a list of comments for the page added through the [vk.com/dev/Comments|Comments widget].

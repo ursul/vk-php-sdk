@@ -14,7 +14,7 @@ use VK\Exceptions\Api\VKApiWallAdsPublishedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Video
+class Video extends Action
 {
 	/**
 	 * Adds a video to a user or community page.

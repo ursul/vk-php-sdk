@@ -10,7 +10,7 @@ use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Orders
+class Orders extends Action
 {
 	/**
 	 * @param string $access_token

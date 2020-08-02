@@ -9,7 +9,7 @@ use VK\Exceptions\Api\VKApiTooManyListsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Newsfeed
+class Newsfeed extends Action
 {
 	/**
 	 * Prevents news from specified users and communities from appearing in the current user's newsfeed.

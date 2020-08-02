@@ -10,7 +10,7 @@ use VK\Actions\Enums\UsersType;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Users
+class Users extends Action
 {
 	/**
 	 * Returns detailed information on users.

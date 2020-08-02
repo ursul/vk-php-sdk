@@ -37,7 +37,7 @@ use VK\Exceptions\Api\VKApiParamGroupIdException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Groups
+class Groups extends Action
 {
 	/**
 	 * @param string $access_token

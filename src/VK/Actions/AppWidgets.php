@@ -12,7 +12,7 @@ use VK\Exceptions\Api\VKApiWallAccessRepliesException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class AppWidgets
+class AppWidgets extends Action
 {
 	/**
 	 * Allows to update community app widget

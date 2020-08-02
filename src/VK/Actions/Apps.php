@@ -11,7 +11,7 @@ use VK\Exceptions\Api\VKApiFloodException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Apps
+class Apps extends Action
 {
 	/**
 	 * Deletes all request notifications from the current app.

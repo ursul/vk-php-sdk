@@ -9,7 +9,7 @@ use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Fave
+class Fave extends Action
 {
 	/**
 	 * @param string $access_token

@@ -6,7 +6,7 @@ use VK\Exceptions\Api\VKApiStatusNoAudioException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Status
+class Status extends Action
 {
 	/**
 	 * Returns data required to show the status of a user or community.

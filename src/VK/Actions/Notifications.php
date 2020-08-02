@@ -6,7 +6,7 @@ use VK\Exceptions\Api\VKApiGroupAppIsNotInstalledInCommunityException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Notifications
+class Notifications extends Action
 {
 	/**
 	 * Returns a list of notifications about other users' feedback to the current user's wall posts.

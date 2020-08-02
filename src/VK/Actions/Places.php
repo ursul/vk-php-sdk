@@ -5,7 +5,7 @@
 
 namespace VK\Actions;
 
-class Places
+class Places extends Action
 {
 
 }

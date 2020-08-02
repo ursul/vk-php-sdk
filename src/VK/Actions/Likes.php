@@ -8,7 +8,7 @@ use VK\Actions\Enums\LikesType;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Likes
+class Likes extends Action
 {
 	/**
 	 * Adds the specified object to the 'Likes' list of the current user.

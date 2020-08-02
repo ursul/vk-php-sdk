@@ -12,7 +12,7 @@ use VK\Exceptions\Api\VKApiSaveFileException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Docs
+class Docs extends Action
 {
 	/**
 	 * Copies a document to a user's or community's document list.

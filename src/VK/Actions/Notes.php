@@ -10,7 +10,7 @@ use VK\Exceptions\Api\VKApiParamNoteIdException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Notes
+class Notes extends Action
 {
 	/**
 	 * Creates a new note for the current user.

@@ -5,7 +5,7 @@ namespace VK\Actions;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Database
+class Database extends Action
 {
 	/**
 	 * Returns list of chairs on a specified faculty.

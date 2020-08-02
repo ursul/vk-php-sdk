@@ -9,7 +9,7 @@ use VK\Exceptions\Api\VKApiVotesException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Leads
+class Leads extends Action
 {
 	/**
 	 * Checks if the user can start the lead.

@@ -5,7 +5,7 @@ namespace VK\Actions;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Gifts
+class Gifts extends Action
 {
 	/**
 	 * Returns a list of user gifts.

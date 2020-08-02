@@ -6,7 +6,7 @@ use VK\Exceptions\Api\VKApiWallAccessPostException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Stats
+class Stats extends Action
 {
 	/**
 	 * Returns statistics of a community or an application.

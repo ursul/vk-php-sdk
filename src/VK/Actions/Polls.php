@@ -11,7 +11,7 @@ use VK\Exceptions\Api\VKApiPollsPollIdException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Polls
+class Polls extends Action
 {
 	/**
 	 * Adds the current user's vote to the selected answer in the poll.

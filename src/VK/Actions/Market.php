@@ -19,7 +19,7 @@ use VK\Exceptions\Api\VKApiMarketTooManyItemsInAlbumException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Market
+class Market extends Action
 {
 	/**
 	 * Ads a new item to the market.

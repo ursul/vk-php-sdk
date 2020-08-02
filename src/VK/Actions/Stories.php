@@ -10,7 +10,7 @@ use VK\Exceptions\Api\VKApiStoryIncorrectReplyPrivacyException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Stories
+class Stories extends Action
 {
 	/**
 	 * Allows to hide stories from chosen sources from current user's feed.

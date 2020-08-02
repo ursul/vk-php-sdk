@@ -8,7 +8,7 @@ use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Utils
+class Utils extends Action
 {
 	/**
 	 * Checks whether a link is blocked in VK.

@@ -5,7 +5,7 @@ namespace VK\Actions;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Search
+class Search extends Action
 {
 	/**
 	 * Allows the programmer to do a quick search for any substring.

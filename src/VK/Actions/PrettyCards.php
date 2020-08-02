@@ -8,7 +8,7 @@ use VK\Exceptions\Api\VKApiPrettyCardsTooManyCardsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class PrettyCards
+class PrettyCards extends Action
 {
 	/**
 	 * @param string $access_token

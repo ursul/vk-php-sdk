@@ -36,7 +36,7 @@ use VK\Exceptions\Api\VKApiUploadException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Messages
+class Messages extends Action
 {
 	/**
 	 * Adds a new user to a chat.

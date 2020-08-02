@@ -15,7 +15,7 @@ use VK\Exceptions\Api\VKApiParamServerException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Photos
+class Photos extends Action
 {
 	/**
 	 * Confirms a tag on a photo.

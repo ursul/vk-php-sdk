@@ -6,7 +6,7 @@ use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Storage
+class Storage extends Action
 {
 	/**
 	 * Returns a value of variable with the name set by key parameter.

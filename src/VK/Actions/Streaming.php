@@ -6,7 +6,7 @@ use VK\Actions\Enums\StreamingMonthlyTier;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Streaming
+class Streaming extends Action
 {
 	/**
 	 * Allows to receive data for the connection to Streaming API.

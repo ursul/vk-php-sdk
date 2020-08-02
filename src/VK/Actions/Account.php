@@ -10,7 +10,7 @@ use VK\Exceptions\Api\VKApiInvalidAddressException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Account
+class Account extends Action
 {
 	/**
 	 * @param string $access_token

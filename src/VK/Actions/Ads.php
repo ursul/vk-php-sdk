@@ -14,7 +14,7 @@ use VK\Exceptions\Api\VKApiWeightedFloodException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Ads
+class Ads extends Action
 {
 	/**
 	 * Adds managers and/or supervisors to advertising account.

@@ -14,7 +14,7 @@ use VK\Exceptions\Api\VKApiFriendsListLimitException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Friends
+class Friends extends Action
 {
 	/**
 	 * Approves or creates a friend request.

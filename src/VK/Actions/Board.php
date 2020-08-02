@@ -8,7 +8,7 @@ use VK\Actions\Enums\BoardSort;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Board
+class Board extends Action
 {
 	/**
 	 * Creates a new topic on a community's discussion board.

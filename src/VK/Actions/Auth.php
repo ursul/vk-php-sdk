@@ -9,7 +9,7 @@ use VK\Exceptions\Api\VKApiPhoneAlreadyUsedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Auth
+class Auth extends Action
 {
 	/**
 	 * Checks a user's phone number for correctness.

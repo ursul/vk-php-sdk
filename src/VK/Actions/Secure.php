@@ -9,7 +9,7 @@ use VK\Exceptions\Api\VKApiMobileNotActivatedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-class Secure
+class Secure extends Action
 {
 	/**
 	 * Adds user activity information to an application
