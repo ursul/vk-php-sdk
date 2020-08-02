@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\DocsType;
+use VK\Actions\Enums\Docs\DocsType;
 use VK\Exceptions\Api\VKApiMessagesDenySendException;
 use VK\Exceptions\Api\VKApiParamDocAccessException;
 use VK\Exceptions\Api\VKApiParamDocDeleteAccessException;

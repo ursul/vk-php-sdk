@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\UtilsInterval;
-use VK\Actions\Enums\UtilsSource;
+use VK\Actions\Enums\Utils\UtilsInterval;
+use VK\Actions\Enums\Utils\UtilsSource;
 use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;

@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\MessagesFilter;
-use VK\Actions\Enums\MessagesMediaType;
-use VK\Actions\Enums\MessagesRev;
+use VK\Actions\Enums\Messages\MessagesFilter;
+use VK\Actions\Enums\Messages\MessagesMediaType;
+use VK\Actions\Enums\Messages\MessagesRev;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\Api\VKApiMessagesCantChangeInviteLinkException;
 use VK\Exceptions\Api\VKApiMessagesCantDeleteForAllException;

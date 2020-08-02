@@ -2,12 +2,12 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\AdsAdFormat;
-use VK\Actions\Enums\AdsIdsType;
-use VK\Actions\Enums\AdsLang;
-use VK\Actions\Enums\AdsLinkType;
-use VK\Actions\Enums\AdsPeriod;
-use VK\Actions\Enums\AdsSection;
+use VK\Actions\Enums\Ads\AdsAdFormat;
+use VK\Actions\Enums\Ads\AdsIdsType;
+use VK\Actions\Enums\Ads\AdsLang;
+use VK\Actions\Enums\Ads\AdsLinkType;
+use VK\Actions\Enums\Ads\AdsPeriod;
+use VK\Actions\Enums\Ads\AdsSection;
 use VK\Exceptions\Api\VKApiAdsObjectDeletedException;
 use VK\Exceptions\Api\VKApiAdsPartialSuccessException;
 use VK\Exceptions\Api\VKApiWeightedFloodException;

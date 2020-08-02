@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\BoardOrder;
-use VK\Actions\Enums\BoardPreview;
-use VK\Actions\Enums\BoardSort;
+use VK\Actions\Enums\Boards\BoardOrder;
+use VK\Actions\Enums\Boards\BoardPreview;
+use VK\Actions\Enums\Boards\BoardSort;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 

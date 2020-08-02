@@ -2,11 +2,11 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\AppsFilter;
-use VK\Actions\Enums\AppsNameCase;
-use VK\Actions\Enums\AppsPlatform;
-use VK\Actions\Enums\AppsSort;
-use VK\Actions\Enums\AppsType;
+use VK\Actions\Enums\Apps\AppsFilter;
+use VK\Actions\Enums\Apps\AppsNameCase;
+use VK\Actions\Enums\Apps\AppsPlatform;
+use VK\Actions\Enums\Apps\AppsSort;
+use VK\Actions\Enums\Apps\AppsType;
 use VK\Exceptions\Api\VKApiFloodException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;

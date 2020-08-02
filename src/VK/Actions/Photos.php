@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\PhotosReason;
-use VK\Actions\Enums\PhotosSort;
+use VK\Actions\Enums\Photos\PhotosReason;
+use VK\Actions\Enums\Photos\PhotosSort;
 use VK\Exceptions\Api\VKApiAlbumsLimitException;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiMessagesDenySendException;

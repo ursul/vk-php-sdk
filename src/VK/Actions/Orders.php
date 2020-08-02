@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\OrdersAction;
+use VK\Actions\Enums\Orders\OrdersAction;
 use VK\Exceptions\Api\VKApiActionFailedException;
 use VK\Exceptions\Api\VKApiAppsSubscriptionInvalidStatusException;
 use VK\Exceptions\Api\VKApiAppsSubscriptionNotFoundException;

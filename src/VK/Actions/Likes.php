@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\LikesFilter;
-use VK\Actions\Enums\LikesFriendsOnly;
-use VK\Actions\Enums\LikesType;
+use VK\Actions\Enums\Likes\LikesFilter;
+use VK\Actions\Enums\Likes\LikesFriendsOnly;
+use VK\Actions\Enums\Likes\LikesType;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 

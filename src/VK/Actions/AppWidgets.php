@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\AppWidgetsType;
+use VK\Actions\Enums\AppWidgets\AppWidgetsType;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiCompileException;
 use VK\Exceptions\Api\VKApiParamGroupIdException;

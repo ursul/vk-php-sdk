@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\PagesEdit;
-use VK\Actions\Enums\PagesView;
+use VK\Actions\Enums\Pages\PagesEdit;
+use VK\Actions\Enums\Pages\PagesView;
 use VK\Exceptions\Api\VKApiAccessPageException;
 use VK\Exceptions\Api\VKApiParamPageIdException;
 use VK\Exceptions\Api\VKApiParamTitleException;

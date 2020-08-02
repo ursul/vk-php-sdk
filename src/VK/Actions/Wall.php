@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\WallFilter;
-use VK\Actions\Enums\WallReason;
-use VK\Actions\Enums\WallSort;
+use VK\Actions\Enums\Wall\WallFilter;
+use VK\Actions\Enums\Wall\WallReason;
+use VK\Actions\Enums\Wall\WallSort;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiWallAccessAddReplyException;
 use VK\Exceptions\Api\VKApiWallAccessCommentException;

@@ -2,10 +2,10 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\MarketReason;
-use VK\Actions\Enums\MarketRev;
-use VK\Actions\Enums\MarketSort;
-use VK\Actions\Enums\MarketStatus;
+use VK\Actions\Enums\Market\MarketReason;
+use VK\Actions\Enums\Market\MarketRev;
+use VK\Actions\Enums\Market\MarketSort;
+use VK\Actions\Enums\Market\MarketStatus;
 use VK\Exceptions\Api\VKApiAccessMarketException;
 use VK\Exceptions\Api\VKApiMarketAlbumNotFoundException;
 use VK\Exceptions\Api\VKApiMarketCommentsClosedException;

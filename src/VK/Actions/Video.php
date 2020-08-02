@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\VideoReason;
-use VK\Actions\Enums\VideoSort;
+use VK\Actions\Enums\Videos\VideoReason;
+use VK\Actions\Enums\Videos\VideoSort;
 use VK\Exceptions\Api\VKApiAccessVideoException;
 use VK\Exceptions\Api\VKApiAlbumsLimitException;
 use VK\Exceptions\Api\VKApiNotFoundException;

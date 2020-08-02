@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\LeadsStatus;
+use VK\Actions\Enums\Leads\LeadsStatus;
 use VK\Exceptions\Api\VKApiActionFailedException;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\Api\VKApiVotesException;

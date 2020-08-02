@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\AccountBdateVisibility;
-use VK\Actions\Enums\AccountRelation;
-use VK\Actions\Enums\AccountSex;
+use VK\Actions\Enums\Accounts\AccountBdateVisibility;
+use VK\Actions\Enums\Accounts\AccountRelation;
+use VK\Actions\Enums\Accounts\AccountSex;
 use VK\Exceptions\Api\VKApiAccessMenuException;
 use VK\Exceptions\Api\VKApiInvalidAddressException;
 use VK\Exceptions\VKApiException;

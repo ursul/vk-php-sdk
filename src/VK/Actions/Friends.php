@@ -2,9 +2,9 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\FriendsNameCase;
-use VK\Actions\Enums\FriendsOrder;
-use VK\Actions\Enums\FriendsSort;
+use VK\Actions\Enums\Friends\FriendsNameCase;
+use VK\Actions\Enums\Friends\FriendsOrder;
+use VK\Actions\Enums\Friends\FriendsSort;
 use VK\Exceptions\Api\VKApiFriendsAddEnemyException;
 use VK\Exceptions\Api\VKApiFriendsAddInEnemyException;
 use VK\Exceptions\Api\VKApiFriendsAddNotFoundException;

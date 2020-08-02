@@ -2,11 +2,11 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\UsersNameCase;
-use VK\Actions\Enums\UsersSex;
-use VK\Actions\Enums\UsersSort;
-use VK\Actions\Enums\UsersStatus;
-use VK\Actions\Enums\UsersType;
+use VK\Actions\Enums\Users\UsersNameCase;
+use VK\Actions\Enums\Users\UsersSex;
+use VK\Actions\Enums\Users\UsersSort;
+use VK\Actions\Enums\Users\UsersStatus;
+use VK\Actions\Enums\Users\UsersType;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 

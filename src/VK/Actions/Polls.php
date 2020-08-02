@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\PollsBackgroundId;
-use VK\Actions\Enums\PollsNameCase;
+use VK\Actions\Enums\Polls\PollsBackgroundId;
+use VK\Actions\Enums\Polls\PollsNameCase;
 use VK\Exceptions\Api\VKApiPollsAccessException;
 use VK\Exceptions\Api\VKApiPollsAccessWithoutVoteException;
 use VK\Exceptions\Api\VKApiPollsAnswerIdException;

@@ -3,8 +3,8 @@
 namespace VK\Actions;
 
 use VK\Actions\Enums\Newsfeed\IgnoreItemType;
-use VK\Actions\Enums\NewsfeedNameCase;
-use VK\Actions\Enums\NewsfeedType;
+use VK\Actions\Enums\Newsfeed\NewsfeedNameCase;
+use VK\Actions\Enums\Newsfeed\NewsfeedType;
 use VK\Exceptions\Api\VKApiTooManyListsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;

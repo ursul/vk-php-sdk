@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\NotesSort;
+use VK\Actions\Enums\Notes\NotesSort;
 use VK\Exceptions\Api\VKApiAccessCommentException;
 use VK\Exceptions\Api\VKApiAccessNoteCommentException;
 use VK\Exceptions\Api\VKApiAccessNoteException;

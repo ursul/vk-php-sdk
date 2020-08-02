@@ -2,7 +2,7 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\StreamingMonthlyTier;
+use VK\Actions\Enums\Streaming\StreamingMonthlyTier;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 

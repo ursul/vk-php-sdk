@@ -2,8 +2,8 @@
 
 namespace VK\Actions;
 
-use VK\Actions\Enums\FaveItemType;
-use VK\Actions\Enums\FaveType;
+use VK\Actions\Enums\Fave\FaveItemType;
+use VK\Actions\Enums\Fave\FaveType;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
