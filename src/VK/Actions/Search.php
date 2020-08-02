@@ -1,28 +1,12 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Search {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Search constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Search extends Action
+{
 	/**
 	 * Allows the programmer to do a quick search for any substring.
 	 *
@@ -38,7 +22,8 @@ class Search {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getHints($access_token, array $params = []) {
+	public function getHints(string $access_token, array $params = [])
+	{
 		return $this->request->post('search.getHints', $access_token, $params);
 	}
 }

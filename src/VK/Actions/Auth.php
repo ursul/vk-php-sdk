@@ -1,7 +1,7 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiAuthDelayException;
 use VK\Exceptions\Api\VKApiAuthFloodException;
 use VK\Exceptions\Api\VKApiParamPhoneException;
@@ -9,24 +9,8 @@ use VK\Exceptions\Api\VKApiPhoneAlreadyUsedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Auth {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Auth constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Auth extends Action
+{
 	/**
 	 * Checks a user's phone number for correctness.
 	 *
@@ -43,7 +27,8 @@ class Auth {
 	 * @throws VKApiParamPhoneException Invalid phone number
 	 * @return mixed
 	 */
-	public function checkPhone($access_token, array $params = []) {
+	public function checkPhone(string $access_token, array $params = [])
+	{
 		return $this->request->post('auth.checkPhone', $access_token, $params);
 	}
 
@@ -59,7 +44,8 @@ class Auth {
 	 * @throws VKApiAuthFloodException Too many auth attempts, try again later
 	 * @return mixed
 	 */
-	public function restore($access_token, array $params = []) {
+	public function restore(string $access_token, array $params = [])
+	{
 		return $this->request->post('auth.restore', $access_token, $params);
 	}
 }

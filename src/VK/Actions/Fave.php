@@ -1,32 +1,16 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\FaveItemType;
-use VK\Actions\Enums\FaveType;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Fave\FaveItemType;
+use VK\Actions\Enums\Fave\FaveType;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Fave {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Fave constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Fave extends Action
+{
 	/**
 	 * @param string $access_token
 	 * @param array $params 
@@ -36,7 +20,8 @@ class Fave {
 	 * @throws VKApiNotFoundException Not found
 	 * @return mixed
 	 */
-	public function addArticle($access_token, array $params = []) {
+	public function addArticle(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addArticle', $access_token, $params);
 	}
 
@@ -50,7 +35,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addLink($access_token, array $params = []) {
+	public function addLink(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addLink', $access_token, $params);
 	}
 
@@ -63,7 +49,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addPage($access_token, array $params = []) {
+	public function addPage(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addPage', $access_token, $params);
 	}
 
@@ -77,7 +64,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addPost($access_token, array $params = []) {
+	public function addPost(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addPost', $access_token, $params);
 	}
 
@@ -91,7 +79,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addProduct($access_token, array $params = []) {
+	public function addProduct(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addProduct', $access_token, $params);
 	}
 
@@ -104,7 +93,8 @@ class Fave {
 	 * @throws VKApiLimitsException Out of limits
 	 * @return mixed
 	 */
-	public function addTag($access_token, array $params = []) {
+	public function addTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addTag', $access_token, $params);
 	}
 
@@ -118,7 +108,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addVideo($access_token, array $params = []) {
+	public function addVideo(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.addVideo', $access_token, $params);
 	}
 
@@ -131,7 +122,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editTag($access_token, array $params = []) {
+	public function editTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.editTag', $access_token, $params);
 	}
 
@@ -149,7 +141,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.get', $access_token, $params);
 	}
 
@@ -165,7 +158,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getPages($access_token, array $params = []) {
+	public function getPages(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.getPages', $access_token, $params);
 	}
 
@@ -175,7 +169,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getTags($access_token) {
+	public function getTags(string $access_token)
+	{
 		return $this->request->post('fave.getTags', $access_token);
 	}
 
@@ -185,7 +180,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function markSeen($access_token) {
+	public function markSeen(string $access_token)
+	{
 		return $this->request->post('fave.markSeen', $access_token);
 	}
 
@@ -198,7 +194,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removeArticle($access_token, array $params = []) {
+	public function removeArticle(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removeArticle', $access_token, $params);
 	}
 
@@ -213,7 +210,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removeLink($access_token, array $params = []) {
+	public function removeLink(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removeLink', $access_token, $params);
 	}
 
@@ -226,7 +224,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removePage($access_token, array $params = []) {
+	public function removePage(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removePage', $access_token, $params);
 	}
 
@@ -239,7 +238,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removePost($access_token, array $params = []) {
+	public function removePost(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removePost', $access_token, $params);
 	}
 
@@ -252,7 +252,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removeProduct($access_token, array $params = []) {
+	public function removeProduct(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removeProduct', $access_token, $params);
 	}
 
@@ -264,7 +265,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removeTag($access_token, array $params = []) {
+	public function removeTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.removeTag', $access_token, $params);
 	}
 
@@ -276,7 +278,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reorderTags($access_token, array $params = []) {
+	public function reorderTags(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.reorderTags', $access_token, $params);
 	}
 
@@ -291,7 +294,8 @@ class Fave {
 	 * @throws VKApiNotFoundException Not found
 	 * @return mixed
 	 */
-	public function setPageTags($access_token, array $params = []) {
+	public function setPageTags(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.setPageTags', $access_token, $params);
 	}
 
@@ -309,7 +313,8 @@ class Fave {
 	 * @throws VKApiNotFoundException Not found
 	 * @return mixed
 	 */
-	public function setTags($access_token, array $params = []) {
+	public function setTags(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.setTags', $access_token, $params);
 	}
 
@@ -322,7 +327,8 @@ class Fave {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function trackPageInteraction($access_token, array $params = []) {
+	public function trackPageInteraction(string $access_token, array $params = [])
+	{
 		return $this->request->post('fave.trackPageInteraction', $access_token, $params);
 	}
 }

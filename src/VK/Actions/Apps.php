@@ -1,34 +1,18 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\AppsFilter;
-use VK\Actions\Enums\AppsNameCase;
-use VK\Actions\Enums\AppsPlatform;
-use VK\Actions\Enums\AppsSort;
-use VK\Actions\Enums\AppsType;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Apps\AppsFilter;
+use VK\Actions\Enums\Apps\AppsNameCase;
+use VK\Actions\Enums\Apps\AppsPlatform;
+use VK\Actions\Enums\Apps\AppsSort;
+use VK\Actions\Enums\Apps\AppsType;
 use VK\Exceptions\Api\VKApiFloodException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Apps {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Apps constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Apps extends Action
+{
 	/**
 	 * Deletes all request notifications from the current app.
 	 *
@@ -37,7 +21,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteAppRequests($access_token) {
+	public function deleteAppRequests(string $access_token)
+	{
 		return $this->request->post('apps.deleteAppRequests', $access_token);
 	}
 
@@ -57,7 +42,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.get', $access_token, $params);
 	}
 
@@ -81,7 +67,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getCatalog($access_token, array $params = []) {
+	public function getCatalog(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.getCatalog', $access_token, $params);
 	}
 
@@ -99,7 +86,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getFriendsList($access_token, array $params = []) {
+	public function getFriendsList(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.getFriendsList', $access_token, $params);
 	}
 
@@ -115,7 +103,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getLeaderboard($access_token, array $params = []) {
+	public function getLeaderboard(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.getLeaderboard', $access_token, $params);
 	}
 
@@ -129,7 +118,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getScopes($access_token, array $params = []) {
+	public function getScopes(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.getScopes', $access_token, $params);
 	}
 
@@ -143,7 +133,8 @@ class Apps {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getScore($access_token, array $params = []) {
+	public function getScore(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.getScore', $access_token, $params);
 	}
 
@@ -163,7 +154,8 @@ class Apps {
 	 * @throws VKApiFloodException Flood control
 	 * @return mixed
 	 */
-	public function sendRequest($access_token, array $params = []) {
+	public function sendRequest(string $access_token, array $params = [])
+	{
 		return $this->request->post('apps.sendRequest', $access_token, $params);
 	}
 }

@@ -2,43 +2,31 @@
 
 namespace VK\TransportClient;
 
-class TransportClientResponse {
-    private $http_status;
-
-    private $headers;
-
-    private $body;
-
-    /**
-     * TransportClientResponse constructor.
-     * @param int|null $http_status
-     * @param array|null $headers
-     * @param null|string $body
-     */
-    public function __construct(?int $http_status, ?array $headers, ?string $body) {
+class TransportClientResponse
+{
+	private ?int $http_status;
+	private ?array $headers;
+	private ?string $body;
+	
+    public function __construct(?int $http_status, ?array $headers, ?string $body)
+    {
         $this->http_status = $http_status;
         $this->headers = $headers;
         $this->body = $body;
     }
-
-    /**
-     * @return string|null
-     */
-    public function getBody() {
+    
+    public function getBody(): ?string
+    {
         return $this->body;
     }
-
-    /**
-     * @return int|null
-     */
-    public function getHttpStatus() {
+    
+    public function getHttpStatus(): ?int
+    {
         return $this->http_status;
     }
-
-    /**
-     * @return array|null
-     */
-    public function getHeaders() {
+    
+    public function getHeaders(): ?array
+    {
         return $this->headers;
     }
 }

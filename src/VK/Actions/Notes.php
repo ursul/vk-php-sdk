@@ -1,8 +1,8 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\NotesSort;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Notes\NotesSort;
 use VK\Exceptions\Api\VKApiAccessCommentException;
 use VK\Exceptions\Api\VKApiAccessNoteCommentException;
 use VK\Exceptions\Api\VKApiAccessNoteException;
@@ -10,24 +10,8 @@ use VK\Exceptions\Api\VKApiParamNoteIdException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Notes {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Notes constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Notes extends Action
+{
 	/**
 	 * Creates a new note for the current user.
 	 *
@@ -41,7 +25,8 @@ class Notes {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function add($access_token, array $params = []) {
+	public function add(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.add', $access_token, $params);
 	}
 
@@ -61,7 +46,8 @@ class Notes {
 	 * @throws VKApiAccessNoteCommentException You can't comment this note
 	 * @return mixed
 	 */
-	public function createComment($access_token, array $params = []) {
+	public function createComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.createComment', $access_token, $params);
 	}
 
@@ -76,7 +62,8 @@ class Notes {
 	 * @throws VKApiParamNoteIdException Note not found
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.delete', $access_token, $params);
 	}
 
@@ -93,7 +80,8 @@ class Notes {
 	 * @throws VKApiAccessCommentException Access to comment denied
 	 * @return mixed
 	 */
-	public function deleteComment($access_token, array $params = []) {
+	public function deleteComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.deleteComment', $access_token, $params);
 	}
 
@@ -112,7 +100,8 @@ class Notes {
 	 * @throws VKApiParamNoteIdException Note not found
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.edit', $access_token, $params);
 	}
 
@@ -129,7 +118,8 @@ class Notes {
 	 * @throws VKApiAccessCommentException Access to comment denied
 	 * @return mixed
 	 */
-	public function editComment($access_token, array $params = []) {
+	public function editComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.editComment', $access_token, $params);
 	}
 
@@ -148,7 +138,8 @@ class Notes {
 	 * @throws VKApiParamNoteIdException Note not found
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.get', $access_token, $params);
 	}
 
@@ -166,7 +157,8 @@ class Notes {
 	 * @throws VKApiParamNoteIdException Note not found
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.getById', $access_token, $params);
 	}
 
@@ -185,7 +177,8 @@ class Notes {
 	 * @throws VKApiAccessNoteException Access to note denied
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.getComments', $access_token, $params);
 	}
 
@@ -201,7 +194,8 @@ class Notes {
 	 * @throws VKApiAccessCommentException Access to comment denied
 	 * @return mixed
 	 */
-	public function restoreComment($access_token, array $params = []) {
+	public function restoreComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('notes.restoreComment', $access_token, $params);
 	}
 }

@@ -1,29 +1,13 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiGroupAppIsNotInstalledInCommunityException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Notifications {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Notifications constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Notifications extends Action
+{
 	/**
 	 * Returns a list of notifications about other users' feedback to the current user's wall posts.
 	 *
@@ -38,7 +22,8 @@ class Notifications {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('notifications.get', $access_token, $params);
 	}
 
@@ -50,7 +35,8 @@ class Notifications {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function markAsViewed($access_token) {
+	public function markAsViewed(string $access_token)
+	{
 		return $this->request->post('notifications.markAsViewed', $access_token);
 	}
 
@@ -66,7 +52,8 @@ class Notifications {
 	 * @throws VKApiGroupAppIsNotInstalledInCommunityException Application is not installed in community
 	 * @return mixed
 	 */
-	public function sendMessage($access_token, array $params = []) {
+	public function sendMessage(string $access_token, array $params = [])
+	{
 		return $this->request->post('notifications.sendMessage', $access_token, $params);
 	}
 }

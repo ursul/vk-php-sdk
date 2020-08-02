@@ -1,31 +1,15 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\LikesFilter;
-use VK\Actions\Enums\LikesFriendsOnly;
-use VK\Actions\Enums\LikesType;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Likes\LikesFilter;
+use VK\Actions\Enums\Likes\LikesFriendsOnly;
+use VK\Actions\Enums\Likes\LikesType;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Likes {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Likes constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Likes extends Action
+{
 	/**
 	 * Adds the specified object to the 'Likes' list of the current user.
 	 *
@@ -39,7 +23,8 @@ class Likes {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function add($access_token, array $params = []) {
+	public function add(string $access_token, array $params = [])
+	{
 		return $this->request->post('likes.add', $access_token, $params);
 	}
 
@@ -55,7 +40,8 @@ class Likes {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('likes.delete', $access_token, $params);
 	}
 
@@ -78,7 +64,8 @@ class Likes {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getList($access_token, array $params = []) {
+	public function getList(string $access_token, array $params = [])
+	{
 		return $this->request->post('likes.getList', $access_token, $params);
 	}
 
@@ -95,7 +82,8 @@ class Likes {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function isLiked($access_token, array $params = []) {
+	public function isLiked(string $access_token, array $params = [])
+	{
 		return $this->request->post('likes.isLiked', $access_token, $params);
 	}
 }

@@ -1,10 +1,10 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\WallFilter;
-use VK\Actions\Enums\WallReason;
-use VK\Actions\Enums\WallSort;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Wall\WallFilter;
+use VK\Actions\Enums\Wall\WallReason;
+use VK\Actions\Enums\Wall\WallSort;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiWallAccessAddReplyException;
 use VK\Exceptions\Api\VKApiWallAccessCommentException;
@@ -19,24 +19,8 @@ use VK\Exceptions\Api\VKApiWallTooManyRecipientsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Wall {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Wall constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Wall extends Action
+{
 	/**
 	 * @param string $access_token
 	 * @param array $params 
@@ -46,7 +30,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function closeComments($access_token, array $params = []) {
+	public function closeComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.closeComments', $access_token, $params);
 	}
 
@@ -71,7 +56,8 @@ class Wall {
 	 * @throws VKApiWallAccessRepliesException Access to post comments denied
 	 * @return mixed
 	 */
-	public function createComment($access_token, array $params = []) {
+	public function createComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.createComment', $access_token, $params);
 	}
 
@@ -87,7 +73,8 @@ class Wall {
 	 * @throws VKApiWallAccessPostException Access to wall's post denied
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.delete', $access_token, $params);
 	}
 
@@ -103,7 +90,8 @@ class Wall {
 	 * @throws VKApiWallAccessCommentException Access to wall's comment denied
 	 * @return mixed
 	 */
-	public function deleteComment($access_token, array $params = []) {
+	public function deleteComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.deleteComment', $access_token, $params);
 	}
 
@@ -133,7 +121,8 @@ class Wall {
 	 * @throws VKApiWallAdsPostLimitReachedException Too many ads posts
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.edit', $access_token, $params);
 	}
 
@@ -159,7 +148,8 @@ class Wall {
 	 * @throws VKApiWallAdsPostLimitReachedException Too many ads posts
 	 * @return mixed
 	 */
-	public function editAdsStealth($access_token, array $params = []) {
+	public function editAdsStealth(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.editAdsStealth', $access_token, $params);
 	}
 
@@ -176,7 +166,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editComment($access_token, array $params = []) {
+	public function editComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.editComment', $access_token, $params);
 	}
 
@@ -197,7 +188,8 @@ class Wall {
 	 * @throws VKApiBlockedException Content blocked
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.get', $access_token, $params);
 	}
 
@@ -214,7 +206,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.getById', $access_token, $params);
 	}
 
@@ -240,7 +233,8 @@ class Wall {
 	 * @throws VKApiWallAccessRepliesException Access to post comments denied
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.getComments', $access_token, $params);
 	}
 
@@ -257,7 +251,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getReposts($access_token, array $params = []) {
+	public function getReposts(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.getReposts', $access_token, $params);
 	}
 
@@ -270,7 +265,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function openComments($access_token, array $params = []) {
+	public function openComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.openComments', $access_token, $params);
 	}
 
@@ -285,7 +281,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function pin($access_token, array $params = []) {
+	public function pin(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.pin', $access_token, $params);
 	}
 
@@ -319,7 +316,8 @@ class Wall {
 	 * @throws VKApiWallAdsPostLimitReachedException Too many ads posts
 	 * @return mixed
 	 */
-	public function post($access_token, array $params = []) {
+	public function post(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.post', $access_token, $params);
 	}
 
@@ -348,7 +346,8 @@ class Wall {
 	 * @throws VKApiWallLinksForbiddenException Hyperlinks are forbidden
 	 * @return mixed
 	 */
-	public function postAdsStealth($access_token, array $params = []) {
+	public function postAdsStealth(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.postAdsStealth', $access_token, $params);
 	}
 
@@ -364,7 +363,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reportComment($access_token, array $params = []) {
+	public function reportComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.reportComment', $access_token, $params);
 	}
 
@@ -380,7 +380,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reportPost($access_token, array $params = []) {
+	public function reportPost(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.reportPost', $access_token, $params);
 	}
 
@@ -401,7 +402,8 @@ class Wall {
 	 * @throws VKApiWallAdsPostLimitReachedException Too many ads posts
 	 * @return mixed
 	 */
-	public function repost($access_token, array $params = []) {
+	public function repost(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.repost', $access_token, $params);
 	}
 
@@ -418,7 +420,8 @@ class Wall {
 	 * @throws VKApiWallAddPostException Access to adding post denied
 	 * @return mixed
 	 */
-	public function restore($access_token, array $params = []) {
+	public function restore(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.restore', $access_token, $params);
 	}
 
@@ -434,7 +437,8 @@ class Wall {
 	 * @throws VKApiWallAccessCommentException Access to wall's comment denied
 	 * @return mixed
 	 */
-	public function restoreComment($access_token, array $params = []) {
+	public function restoreComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.restoreComment', $access_token, $params);
 	}
 
@@ -456,7 +460,8 @@ class Wall {
 	 * @throws VKApiWallAccessPostException Access to wall's post denied
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.search', $access_token, $params);
 	}
 
@@ -471,7 +476,8 @@ class Wall {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unpin($access_token, array $params = []) {
+	public function unpin(string $access_token, array $params = [])
+	{
 		return $this->request->post('wall.unpin', $access_token, $params);
 	}
 }

@@ -1,9 +1,9 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\VideoReason;
-use VK\Actions\Enums\VideoSort;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Videos\VideoReason;
+use VK\Actions\Enums\Videos\VideoSort;
 use VK\Exceptions\Api\VKApiAccessVideoException;
 use VK\Exceptions\Api\VKApiAlbumsLimitException;
 use VK\Exceptions\Api\VKApiNotFoundException;
@@ -14,24 +14,8 @@ use VK\Exceptions\Api\VKApiWallAdsPublishedException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Video {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Video constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Video extends Action
+{
 	/**
 	 * Adds a video to a user or community page.
 	 *
@@ -46,7 +30,8 @@ class Video {
 	 * @throws VKApiVideoAlreadyAddedException This video is already added
 	 * @return mixed
 	 */
-	public function add($access_token, array $params = []) {
+	public function add(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.add', $access_token, $params);
 	}
 
@@ -64,7 +49,8 @@ class Video {
 	 * @throws VKApiAlbumsLimitException Albums number limit is reached
 	 * @return mixed
 	 */
-	public function addAlbum($access_token, array $params = []) {
+	public function addAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.addAlbum', $access_token, $params);
 	}
 
@@ -82,7 +68,8 @@ class Video {
 	 * @throws VKApiVideoAlreadyAddedException This video is already added
 	 * @return mixed
 	 */
-	public function addToAlbum($access_token, array $params = []) {
+	public function addToAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.addToAlbum', $access_token, $params);
 	}
 
@@ -104,7 +91,8 @@ class Video {
 	 * @throws VKApiVideoCommentsClosedException Comments for this video are closed
 	 * @return mixed
 	 */
-	public function createComment($access_token, array $params = []) {
+	public function createComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.createComment', $access_token, $params);
 	}
 
@@ -120,7 +108,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.delete', $access_token, $params);
 	}
 
@@ -136,7 +125,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function deleteAlbum($access_token, array $params = []) {
+	public function deleteAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.deleteAlbum', $access_token, $params);
 	}
 
@@ -151,7 +141,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteComment($access_token, array $params = []) {
+	public function deleteComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.deleteComment', $access_token, $params);
 	}
 
@@ -172,7 +163,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.edit', $access_token, $params);
 	}
 
@@ -190,7 +182,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function editAlbum($access_token, array $params = []) {
+	public function editAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.editAlbum', $access_token, $params);
 	}
 
@@ -207,7 +200,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editComment($access_token, array $params = []) {
+	public function editComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.editComment', $access_token, $params);
 	}
 
@@ -227,7 +221,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.get', $access_token, $params);
 	}
 
@@ -243,7 +238,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function getAlbumById($access_token, array $params = []) {
+	public function getAlbumById(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.getAlbumById', $access_token, $params);
 	}
 
@@ -262,7 +258,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function getAlbums($access_token, array $params = []) {
+	public function getAlbums(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.getAlbums', $access_token, $params);
 	}
 
@@ -278,7 +275,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function getAlbumsByVideo($access_token, array $params = []) {
+	public function getAlbumsByVideo(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.getAlbumsByVideo', $access_token, $params);
 	}
 
@@ -301,7 +299,8 @@ class Video {
 	 * @throws VKApiVideoCommentsClosedException Comments for this video are closed
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.getComments', $access_token, $params);
 	}
 
@@ -318,7 +317,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function removeFromAlbum($access_token, array $params = []) {
+	public function removeFromAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.removeFromAlbum', $access_token, $params);
 	}
 
@@ -337,7 +337,8 @@ class Video {
 	 * @throws VKApiNotFoundException Not found
 	 * @return mixed
 	 */
-	public function reorderAlbums($access_token, array $params = []) {
+	public function reorderAlbums(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.reorderAlbums', $access_token, $params);
 	}
 
@@ -359,7 +360,8 @@ class Video {
 	 * @throws VKApiAccessVideoException Access denied
 	 * @return mixed
 	 */
-	public function reorderVideos($access_token, array $params = []) {
+	public function reorderVideos(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.reorderVideos', $access_token, $params);
 	}
 
@@ -377,7 +379,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function report($access_token, array $params = []) {
+	public function report(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.report', $access_token, $params);
 	}
 
@@ -393,7 +396,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reportComment($access_token, array $params = []) {
+	public function reportComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.reportComment', $access_token, $params);
 	}
 
@@ -408,7 +412,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function restore($access_token, array $params = []) {
+	public function restore(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.restore', $access_token, $params);
 	}
 
@@ -423,7 +428,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function restoreComment($access_token, array $params = []) {
+	public function restoreComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.restoreComment', $access_token, $params);
 	}
 
@@ -451,7 +457,8 @@ class Video {
 	 * @throws VKApiWallAdsPublishedException Advertisement post was recently added
 	 * @return mixed
 	 */
-	public function save($access_token, array $params = []) {
+	public function save(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.save', $access_token, $params);
 	}
 
@@ -475,7 +482,8 @@ class Video {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('video.search', $access_token, $params);
 	}
 }

@@ -1,38 +1,22 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\PhotosReason;
-use VK\Actions\Enums\PhotosSort;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Photos\PhotosReason;
+use VK\Actions\Enums\Photos\PhotosSort;
 use VK\Exceptions\Api\VKApiAlbumsLimitException;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiMessagesDenySendException;
 use VK\Exceptions\Api\VKApiParamAlbumIdException;
 use VK\Exceptions\Api\VKApiParamHashException;
-use VK\Exceptions\Api\VKApiParamPhotosException;
 use VK\Exceptions\Api\VKApiParamPhotoException;
+use VK\Exceptions\Api\VKApiParamPhotosException;
 use VK\Exceptions\Api\VKApiParamServerException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Photos {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Photos constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Photos extends Action
+{
 	/**
 	 * Confirms a tag on a photo.
 	 *
@@ -45,7 +29,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function confirmTag($access_token, array $params = []) {
+	public function confirmTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.confirmTag', $access_token, $params);
 	}
 
@@ -61,7 +46,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function copy($access_token, array $params = []) {
+	public function copy(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.copy', $access_token, $params);
 	}
 
@@ -82,7 +68,8 @@ class Photos {
 	 * @throws VKApiAlbumsLimitException Albums number limit is reached
 	 * @return mixed
 	 */
-	public function createAlbum($access_token, array $params = []) {
+	public function createAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.createAlbum', $access_token, $params);
 	}
 
@@ -104,7 +91,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function createComment($access_token, array $params = []) {
+	public function createComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.createComment', $access_token, $params);
 	}
 
@@ -119,7 +107,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.delete', $access_token, $params);
 	}
 
@@ -135,7 +124,8 @@ class Photos {
 	 * @throws VKApiParamAlbumIdException Invalid album id
 	 * @return mixed
 	 */
-	public function deleteAlbum($access_token, array $params = []) {
+	public function deleteAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.deleteAlbum', $access_token, $params);
 	}
 
@@ -150,7 +140,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteComment($access_token, array $params = []) {
+	public function deleteComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.deleteComment', $access_token, $params);
 	}
 
@@ -171,7 +162,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.edit', $access_token, $params);
 	}
 
@@ -193,7 +185,8 @@ class Photos {
 	 * @throws VKApiParamAlbumIdException Invalid album id
 	 * @return mixed
 	 */
-	public function editAlbum($access_token, array $params = []) {
+	public function editAlbum(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.editAlbum', $access_token, $params);
 	}
 
@@ -210,7 +203,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editComment($access_token, array $params = []) {
+	public function editComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.editComment', $access_token, $params);
 	}
 
@@ -233,7 +227,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.get', $access_token, $params);
 	}
 
@@ -253,7 +248,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getAlbums($access_token, array $params = []) {
+	public function getAlbums(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getAlbums', $access_token, $params);
 	}
 
@@ -268,7 +264,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getAlbumsCount($access_token, array $params = []) {
+	public function getAlbumsCount(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getAlbumsCount', $access_token, $params);
 	}
 
@@ -290,7 +287,8 @@ class Photos {
 	 * @throws VKApiBlockedException Content blocked
 	 * @return mixed
 	 */
-	public function getAll($access_token, array $params = []) {
+	public function getAll(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getAll', $access_token, $params);
 	}
 
@@ -309,7 +307,8 @@ class Photos {
 	 * @throws VKApiParamAlbumIdException Invalid album id
 	 * @return mixed
 	 */
-	public function getAllComments($access_token, array $params = []) {
+	public function getAllComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getAllComments', $access_token, $params);
 	}
 
@@ -325,7 +324,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getById', $access_token, $params);
 	}
 
@@ -342,7 +342,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getChatUploadServer($access_token, array $params = []) {
+	public function getChatUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getChatUploadServer', $access_token, $params);
 	}
 
@@ -365,7 +366,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getComments', $access_token, $params);
 	}
 
@@ -379,7 +381,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getMarketAlbumUploadServer($access_token, array $params = []) {
+	public function getMarketAlbumUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getMarketAlbumUploadServer', $access_token, $params);
 	}
 
@@ -397,7 +400,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getMarketUploadServer($access_token, array $params = []) {
+	public function getMarketUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getMarketUploadServer', $access_token, $params);
 	}
 
@@ -412,7 +416,8 @@ class Photos {
 	 * @throws VKApiMessagesDenySendException Can't send messages for users without permission
 	 * @return mixed
 	 */
-	public function getMessagesUploadServer($access_token, array $params = []) {
+	public function getMessagesUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getMessagesUploadServer', $access_token, $params);
 	}
 
@@ -427,7 +432,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getNewTags($access_token, array $params = []) {
+	public function getNewTags(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getNewTags', $access_token, $params);
 	}
 
@@ -445,7 +451,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getOwnerCoverPhotoUploadServer($access_token, array $params = []) {
+	public function getOwnerCoverPhotoUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getOwnerCoverPhotoUploadServer', $access_token, $params);
 	}
 
@@ -459,7 +466,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getOwnerPhotoUploadServer($access_token, array $params = []) {
+	public function getOwnerPhotoUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getOwnerPhotoUploadServer', $access_token, $params);
 	}
 
@@ -475,7 +483,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getTags($access_token, array $params = []) {
+	public function getTags(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getTags', $access_token, $params);
 	}
 
@@ -490,7 +499,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUploadServer($access_token, array $params = []) {
+	public function getUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getUploadServer', $access_token, $params);
 	}
 
@@ -508,7 +518,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUserPhotos($access_token, array $params = []) {
+	public function getUserPhotos(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getUserPhotos', $access_token, $params);
 	}
 
@@ -522,7 +533,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getWallUploadServer($access_token, array $params = []) {
+	public function getWallUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.getWallUploadServer', $access_token, $params);
 	}
 
@@ -538,7 +550,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function makeCover($access_token, array $params = []) {
+	public function makeCover(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.makeCover', $access_token, $params);
 	}
 
@@ -554,7 +567,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function move($access_token, array $params = []) {
+	public function move(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.move', $access_token, $params);
 	}
 
@@ -574,7 +588,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function putTag($access_token, array $params = []) {
+	public function putTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.putTag', $access_token, $params);
 	}
 
@@ -590,7 +605,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function removeTag($access_token, array $params = []) {
+	public function removeTag(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.removeTag', $access_token, $params);
 	}
 
@@ -607,7 +623,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reorderAlbums($access_token, array $params = []) {
+	public function reorderAlbums(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.reorderAlbums', $access_token, $params);
 	}
 
@@ -625,7 +642,8 @@ class Photos {
 	 * @throws VKApiParamPhotosException Invalid photos
 	 * @return mixed
 	 */
-	public function reorderPhotos($access_token, array $params = []) {
+	public function reorderPhotos(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.reorderPhotos', $access_token, $params);
 	}
 
@@ -641,7 +659,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function report($access_token, array $params = []) {
+	public function report(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.report', $access_token, $params);
 	}
 
@@ -657,7 +676,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function reportComment($access_token, array $params = []) {
+	public function reportComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.reportComment', $access_token, $params);
 	}
 
@@ -672,7 +692,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function restore($access_token, array $params = []) {
+	public function restore(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.restore', $access_token, $params);
 	}
 
@@ -687,7 +708,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function restoreComment($access_token, array $params = []) {
+	public function restoreComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.restoreComment', $access_token, $params);
 	}
 
@@ -711,7 +733,8 @@ class Photos {
 	 * @throws VKApiParamHashException Invalid hash
 	 * @return mixed
 	 */
-	public function save($access_token, array $params = []) {
+	public function save(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.save', $access_token, $params);
 	}
 
@@ -730,7 +753,8 @@ class Photos {
 	 * @throws VKApiParamPhotoException Invalid photo
 	 * @return mixed
 	 */
-	public function saveMarketAlbumPhoto($access_token, array $params = []) {
+	public function saveMarketAlbumPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveMarketAlbumPhoto', $access_token, $params);
 	}
 
@@ -751,7 +775,8 @@ class Photos {
 	 * @throws VKApiParamPhotoException Invalid photo
 	 * @return mixed
 	 */
-	public function saveMarketPhoto($access_token, array $params = []) {
+	public function saveMarketPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveMarketPhoto', $access_token, $params);
 	}
 
@@ -770,7 +795,8 @@ class Photos {
 	 * @throws VKApiParamHashException Invalid hash
 	 * @return mixed
 	 */
-	public function saveMessagesPhoto($access_token, array $params = []) {
+	public function saveMessagesPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveMessagesPhoto', $access_token, $params);
 	}
 
@@ -786,7 +812,8 @@ class Photos {
 	 * @throws VKApiParamPhotoException Invalid photo
 	 * @return mixed
 	 */
-	public function saveOwnerCoverPhoto($access_token, array $params = []) {
+	public function saveOwnerCoverPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveOwnerCoverPhoto', $access_token, $params);
 	}
 
@@ -803,7 +830,8 @@ class Photos {
 	 * @throws VKApiParamPhotoException Invalid photo
 	 * @return mixed
 	 */
-	public function saveOwnerPhoto($access_token, array $params = []) {
+	public function saveOwnerPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveOwnerPhoto', $access_token, $params);
 	}
 
@@ -827,7 +855,8 @@ class Photos {
 	 * @throws VKApiParamHashException Invalid hash
 	 * @return mixed
 	 */
-	public function saveWallPhoto($access_token, array $params = []) {
+	public function saveWallPhoto(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.saveWallPhoto', $access_token, $params);
 	}
 
@@ -849,7 +878,8 @@ class Photos {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('photos.search', $access_token, $params);
 	}
 }

@@ -2,8 +2,8 @@
 
 namespace VK\TransportClient;
 
-interface TransportClient {
-
+interface TransportClient
+{
     /**
      * Makes post request.
      *

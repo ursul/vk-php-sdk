@@ -1,8 +1,8 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\Stories\UploadLinkText;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiMessagesUserBlockedException;
 use VK\Exceptions\Api\VKApiStoryExpiredException;
@@ -10,24 +10,8 @@ use VK\Exceptions\Api\VKApiStoryIncorrectReplyPrivacyException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Stories {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Stories constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Stories extends Action
+{
 	/**
 	 * Allows to hide stories from chosen sources from current user's feed.
 	 *
@@ -38,7 +22,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function banOwner($access_token, array $params = []) {
+	public function banOwner(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.banOwner', $access_token, $params);
 	}
 
@@ -53,7 +38,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.delete', $access_token, $params);
 	}
 
@@ -68,7 +54,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.get', $access_token, $params);
 	}
 
@@ -83,7 +70,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getBanned($access_token, array $params = []) {
+	public function getBanned(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getBanned', $access_token, $params);
 	}
 
@@ -100,7 +88,8 @@ class Stories {
 	 * @throws VKApiStoryExpiredException Story has already expired
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getById', $access_token, $params);
 	}
 
@@ -122,7 +111,8 @@ class Stories {
 	 * @throws VKApiBlockedException Content blocked
 	 * @return mixed
 	 */
-	public function getPhotoUploadServer($access_token, array $params = []) {
+	public function getPhotoUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getPhotoUploadServer', $access_token, $params);
 	}
 
@@ -140,7 +130,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getReplies($access_token, array $params = []) {
+	public function getReplies(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getReplies', $access_token, $params);
 	}
 
@@ -155,7 +146,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getStats($access_token, array $params = []) {
+	public function getStats(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getStats', $access_token, $params);
 	}
 
@@ -177,7 +169,8 @@ class Stories {
 	 * @throws VKApiBlockedException Content blocked
 	 * @return mixed
 	 */
-	public function getVideoUploadServer($access_token, array $params = []) {
+	public function getVideoUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getVideoUploadServer', $access_token, $params);
 	}
 
@@ -196,7 +189,8 @@ class Stories {
 	 * @throws VKApiStoryExpiredException Story has already expired
 	 * @return mixed
 	 */
-	public function getViewers($access_token, array $params = []) {
+	public function getViewers(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.getViewers', $access_token, $params);
 	}
 
@@ -211,7 +205,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function hideAllReplies($access_token, array $params = []) {
+	public function hideAllReplies(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.hideAllReplies', $access_token, $params);
 	}
 
@@ -226,7 +221,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function hideReply($access_token, array $params = []) {
+	public function hideReply(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.hideReply', $access_token, $params);
 	}
 
@@ -240,7 +236,8 @@ class Stories {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unbanOwner($access_token, array $params = []) {
+	public function unbanOwner(string $access_token, array $params = [])
+	{
 		return $this->request->post('stories.unbanOwner', $access_token, $params);
 	}
 }

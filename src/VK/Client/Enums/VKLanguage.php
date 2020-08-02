@@ -2,13 +2,14 @@
 
 namespace VK\Client\Enums;
 
-class VKLanguage {
-    const RUSSIAN = 'ru';
-    const UKRAINIAN = 'ua';
-    const BELORUSSIAN = 'be';
-    const ENGLISH = 'en';
-    const SPANISH = 'es';
-    const FINNISH = 'fi';
-    const GERMAN = 'de';
-    const ITALIAN = 'it';
+class VKLanguage
+{
+	public const RUSSIAN = 'ru';
+	public const UKRAINIAN = 'ua';
+	public const BELORUSSIAN = 'be';
+	public const ENGLISH = 'en';
+	public const SPANISH = 'es';
+	public const FINNISH = 'fi';
+	public const GERMAN = 'de';
+	public const ITALIAN = 'it';
 }

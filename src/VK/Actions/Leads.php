@@ -1,32 +1,16 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Actions\Enums\LeadsStatus;
-use VK\Client\VKApiRequest;
+use VK\Actions\Enums\Leads\LeadsStatus;
 use VK\Exceptions\Api\VKApiActionFailedException;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\Api\VKApiVotesException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Leads {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Leads constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Leads extends Action
+{
 	/**
 	 * Checks if the user can start the lead.
 	 *
@@ -43,7 +27,8 @@ class Leads {
 	 * @throws VKApiActionFailedException Unable to process action
 	 * @return mixed
 	 */
-	public function checkUser($access_token, array $params = []) {
+	public function checkUser(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.checkUser', $access_token, $params);
 	}
 
@@ -61,7 +46,8 @@ class Leads {
 	 * @throws VKApiVotesException Not enough votes
 	 * @return mixed
 	 */
-	public function complete($access_token, array $params = []) {
+	public function complete(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.complete', $access_token, $params);
 	}
 
@@ -78,7 +64,8 @@ class Leads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getStats($access_token, array $params = []) {
+	public function getStats(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.getStats', $access_token, $params);
 	}
 
@@ -97,7 +84,8 @@ class Leads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUsers($access_token, array $params = []) {
+	public function getUsers(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.getUsers', $access_token, $params);
 	}
 
@@ -111,7 +99,8 @@ class Leads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function metricHit($access_token, array $params = []) {
+	public function metricHit(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.metricHit', $access_token, $params);
 	}
 
@@ -131,7 +120,8 @@ class Leads {
 	 * @throws VKApiLimitsException Out of limits
 	 * @return mixed
 	 */
-	public function start($access_token, array $params = []) {
+	public function start(string $access_token, array $params = [])
+	{
 		return $this->request->post('leads.start', $access_token, $params);
 	}
 }

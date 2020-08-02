@@ -1,29 +1,13 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiWallAccessPostException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Stats {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Stats constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Stats extends Action
+{
 	/**
 	 * Returns statistics of a community or an application.
 	 *
@@ -42,7 +26,8 @@ class Stats {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('stats.get', $access_token, $params);
 	}
 
@@ -58,7 +43,8 @@ class Stats {
 	 * @throws VKApiWallAccessPostException Access to wall's post denied
 	 * @return mixed
 	 */
-	public function getPostReach($access_token, array $params = []) {
+	public function getPostReach(string $access_token, array $params = [])
+	{
 		return $this->request->post('stats.getPostReach', $access_token, $params);
 	}
 
@@ -70,7 +56,8 @@ class Stats {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function trackVisitor($access_token, array $params = []) {
+	public function trackVisitor(string $access_token, array $params = [])
+	{
 		return $this->request->post('stats.trackVisitor', $access_token, $params);
 	}
 }
