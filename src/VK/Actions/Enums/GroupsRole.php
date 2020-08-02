@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class GroupsRole {
-
-	/**
-	 */
-	const ADMINISTRATOR = 'administrator';
-
-	/**
-	 */
-	const EDITOR = 'editor';
-
-	/**
-	 */
-	const MODERATOR = 'moderator';
+class GroupsRole
+{
+	public const ADMINISTRATOR = 'administrator';
+	public const EDITOR = 'editor';
+	public const MODERATOR = 'moderator';
 }

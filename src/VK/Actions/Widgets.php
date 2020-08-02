@@ -1,28 +1,12 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Widgets {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Widgets constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Widgets
+{
 	/**
 	 * Gets a list of comments for the page added through the [vk.com/dev/Comments|Comments widget].
 	 *
@@ -39,7 +23,8 @@ class Widgets {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('widgets.getComments', $access_token, $params);
 	}
 
@@ -57,7 +42,8 @@ class Widgets {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getPages($access_token, array $params = []) {
+	public function getPages(string $access_token, array $params = [])
+	{
 		return $this->request->post('widgets.getPages', $access_token, $params);
 	}
 }

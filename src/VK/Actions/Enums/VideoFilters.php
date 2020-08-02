@@ -1,23 +1,11 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class VideoFilters {
-
-	/**
-	 */
-	const LONG = 'long';
-
-	/**
-	 */
-	const SHORT = 'short';
-
-	/**
-	 */
-	const VIMEO = 'vimeo';
-
-	/**
-	 */
-	const YOUTUBE = 'youtube';
+class VideoFilters
+{
+	public const LONG = 'long';
+	public const SHORT = 'short';
+	public const VIMEO = 'vimeo';
+	public const YOUTUBE = 'youtube';
 }

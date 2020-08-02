@@ -1,9 +1,9 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\PollsBackgroundId;
 use VK\Actions\Enums\PollsNameCase;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiPollsAccessException;
 use VK\Exceptions\Api\VKApiPollsAccessWithoutVoteException;
 use VK\Exceptions\Api\VKApiPollsAnswerIdException;
@@ -11,24 +11,8 @@ use VK\Exceptions\Api\VKApiPollsPollIdException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Polls {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Polls constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Polls
+{
 	/**
 	 * Adds the current user's vote to the selected answer in the poll.
 	 *
@@ -45,7 +29,8 @@ class Polls {
 	 * @throws VKApiPollsPollIdException Invalid poll id
 	 * @return mixed
 	 */
-	public function addVote($access_token, array $params = []) {
+	public function addVote(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.addVote', $access_token, $params);
 	}
 
@@ -66,7 +51,8 @@ class Polls {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function create($access_token, array $params = []) {
+	public function create(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.create', $access_token, $params);
 	}
 
@@ -86,7 +72,8 @@ class Polls {
 	 * @throws VKApiPollsPollIdException Invalid poll id
 	 * @return mixed
 	 */
-	public function deleteVote($access_token, array $params = []) {
+	public function deleteVote(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.deleteVote', $access_token, $params);
 	}
 
@@ -108,7 +95,8 @@ class Polls {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.edit', $access_token, $params);
 	}
 
@@ -129,7 +117,8 @@ class Polls {
 	 * @throws VKApiPollsAccessException Access to poll denied
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.getById', $access_token, $params);
 	}
 
@@ -155,7 +144,8 @@ class Polls {
 	 * @throws VKApiPollsAccessWithoutVoteException Access denied, please vote first
 	 * @return mixed
 	 */
-	public function getVoters($access_token, array $params = []) {
+	public function getVoters(string $access_token, array $params = [])
+	{
 		return $this->request->post('polls.getVoters', $access_token, $params);
 	}
 }

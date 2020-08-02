@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class WallFilter {
-
-	/**
-	 */
-	const ALL = 'all';
-
-	/**
-	 */
-	const OTHERS = 'others';
-
-	/**
-	 */
-	const OWNER = 'owner';
-
-	/**
-	 */
-	const POSTPONED = 'postponed';
-
-	/**
-	 */
-	const SUGGESTS = 'suggests';
+class WallFilter
+{
+	public const ALL = 'all';
+	public const OTHERS = 'others';
+	public const OWNER = 'owner';
+	public const POSTPONED = 'postponed';
+	public const SUGGESTS = 'suggests';
 }

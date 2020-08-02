@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class VideoSort {
-
-	/**
-	 */
-	const DATE_ADDED = 0;
-
-	/**
-	 */
-	const DURATION = 1;
-
-	/**
-	 */
-	const RELEVANCE = 2;
+class VideoSort
+{
+	public const DATE_ADDED = 0;
+	public const DURATION = 1;
+	public const RELEVANCE = 2;
 }

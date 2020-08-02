@@ -1,29 +1,13 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiLimitsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Storage {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Storage constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Storage
+{
 	/**
 	 * Returns a value of variable with the name set by key parameter.
 	 *
@@ -37,7 +21,8 @@ class Storage {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('storage.get', $access_token, $params);
 	}
 
@@ -54,7 +39,8 @@ class Storage {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getKeys($access_token, array $params = []) {
+	public function getKeys(string $access_token, array $params = [])
+	{
 		return $this->request->post('storage.getKeys', $access_token, $params);
 	}
 
@@ -72,7 +58,8 @@ class Storage {
 	 * @throws VKApiLimitsException Out of limits
 	 * @return mixed
 	 */
-	public function set($access_token, array $params = []) {
+	public function set(string $access_token, array $params = [])
+	{
 		return $this->request->post('storage.set', $access_token, $params);
 	}
 }

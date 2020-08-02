@@ -1,32 +1,16 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\Newsfeed\IgnoreItemType;
 use VK\Actions\Enums\NewsfeedNameCase;
 use VK\Actions\Enums\NewsfeedType;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiTooManyListsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Newsfeed {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Newsfeed constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Newsfeed
+{
 	/**
 	 * Prevents news from specified users and communities from appearing in the current user's newsfeed.
 	 *
@@ -38,7 +22,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addBan($access_token, array $params = []) {
+	public function addBan(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.addBan', $access_token, $params);
 	}
 
@@ -53,7 +38,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteBan($access_token, array $params = []) {
+	public function deleteBan(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.deleteBan', $access_token, $params);
 	}
 
@@ -65,7 +51,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteList($access_token, array $params = []) {
+	public function deleteList(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.deleteList', $access_token, $params);
 	}
 
@@ -88,7 +75,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.get', $access_token, $params);
 	}
 
@@ -104,7 +92,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getBanned($access_token, array $params = []) {
+	public function getBanned(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getBanned', $access_token, $params);
 	}
 
@@ -125,7 +114,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getComments', $access_token, $params);
 	}
 
@@ -140,7 +130,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getLists($access_token, array $params = []) {
+	public function getLists(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getLists', $access_token, $params);
 	}
 
@@ -158,7 +149,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getMentions($access_token, array $params = []) {
+	public function getMentions(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getMentions', $access_token, $params);
 	}
 
@@ -177,7 +169,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getRecommended($access_token, array $params = []) {
+	public function getRecommended(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getRecommended', $access_token, $params);
 	}
 
@@ -194,7 +187,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getSuggestedSources($access_token, array $params = []) {
+	public function getSuggestedSources(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.getSuggestedSources', $access_token, $params);
 	}
 
@@ -210,7 +204,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function ignoreItem($access_token, array $params = []) {
+	public function ignoreItem(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.ignoreItem', $access_token, $params);
 	}
 
@@ -228,7 +223,8 @@ class Newsfeed {
 	 * @throws VKApiTooManyListsException Too many feed lists
 	 * @return mixed
 	 */
-	public function saveList($access_token, array $params = []) {
+	public function saveList(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.saveList', $access_token, $params);
 	}
 
@@ -250,7 +246,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.search', $access_token, $params);
 	}
 
@@ -266,7 +263,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unignoreItem($access_token, array $params = []) {
+	public function unignoreItem(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.unignoreItem', $access_token, $params);
 	}
 
@@ -282,7 +280,8 @@ class Newsfeed {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unsubscribe($access_token, array $params = []) {
+	public function unsubscribe(string $access_token, array $params = [])
+	{
 		return $this->request->post('newsfeed.unsubscribe', $access_token, $params);
 	}
 }

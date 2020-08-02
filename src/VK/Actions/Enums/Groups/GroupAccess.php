@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums\Groups;
 
-/**
- */
-class GroupAccess {
-
-	/**
-	 */
-	const _PRIVATE = 2;
-
-	/**
-	 */
-	const CLOSED = 1;
-
-	/**
-	 */
-	const OPEN = 0;
+class GroupAccess
+{
+	public const _PRIVATE = 2;
+	public const CLOSED = 1;
+	public const OPEN = 0;
 }

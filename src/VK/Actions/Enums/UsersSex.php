@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class UsersSex {
-
-	/**
-	 */
-	const ANY = 0;
-
-	/**
-	 */
-	const FEMALE = 1;
-
-	/**
-	 */
-	const MALE = 2;
+class UsersSex
+{
+	public const ANY = 0;
+	public const FEMALE = 1;
+	public const MALE = 2;
 }

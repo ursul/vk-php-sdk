@@ -1,31 +1,13 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class FriendsNameCase {
-
-	/**
-	 */
-	const ACCUSATIVE = 'acc';
-
-	/**
-	 */
-	const DATIVE = 'dat';
-
-	/**
-	 */
-	const GENITIVE = 'gen';
-
-	/**
-	 */
-	const INSTRUMENTAL = 'ins';
-
-	/**
-	 */
-	const NOMINATIVE = 'nom';
-
-	/**
-	 */
-	const PREPOSITIONAL = 'abl';
+class FriendsNameCase
+{
+	public const ACCUSATIVE = 'acc';
+	public const DATIVE = 'dat';
+	public const GENITIVE = 'gen';
+	public const INSTRUMENTAL = 'ins';
+	public const NOMINATIVE = 'nom';
+	public const PREPOSITIONAL = 'abl';
 }

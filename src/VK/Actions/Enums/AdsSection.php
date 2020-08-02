@@ -1,55 +1,19 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AdsSection {
-
-	/**
-	 */
-	const BROWSERS = 'browsers';
-
-	/**
-	 */
-	const CITIES = 'cities';
-
-	/**
-	 */
-	const COUNTRIES = 'countries';
-
-	/**
-	 */
-	const DISTRICTS = 'districts';
-
-	/**
-	 */
-	const GROUP_TYPES = 'group_types';
-
-	/**
-	 */
-	const INTERESTS = 'interests';
-
-	/**
-	 */
-	const POSITIONS = 'positions';
-
-	/**
-	 */
-	const REGIONS = 'regions';
-
-	/**
-	 */
-	const RELIGIONS = 'religions';
-
-	/**
-	 */
-	const SCHOOLS = 'schools';
-
-	/**
-	 */
-	const STATIONS = 'stations';
-
-	/**
-	 */
-	const STREETS = 'streets';
+class AdsSection
+{
+	public const BROWSERS = 'browsers';
+	public const CITIES = 'cities';
+	public const COUNTRIES = 'countries';
+	public const DISTRICTS = 'districts';
+	public const GROUP_TYPES = 'group_types';
+	public const INTERESTS = 'interests';
+	public const POSITIONS = 'positions';
+	public const REGIONS = 'regions';
+	public const RELIGIONS = 'religions';
+	public const SCHOOLS = 'schools';
+	public const STATIONS = 'stations';
+	public const STREETS = 'streets';
 }

@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class MessagesRev {
-
-	/**
-	 */
-	const CHRONOLOGICAL = 1;
-
-	/**
-	 */
-	const REVERSE_CHRONOLOGICAL = 0;
+class MessagesRev
+{
+	public const CHRONOLOGICAL = 1;
+	public const REVERSE_CHRONOLOGICAL = 0;
 }

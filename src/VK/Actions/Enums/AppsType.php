@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AppsType {
-
-	/**
-	 */
-	const INVITE = 'invite';
-
-	/**
-	 */
-	const REQUEST = 'request';
+class AppsType
+{
+	public const INVITE = 'invite';
+	public const REQUEST = 'request';
 }

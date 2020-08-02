@@ -1,8 +1,8 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\DocsType;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiMessagesDenySendException;
 use VK\Exceptions\Api\VKApiParamDocAccessException;
 use VK\Exceptions\Api\VKApiParamDocDeleteAccessException;
@@ -12,24 +12,8 @@ use VK\Exceptions\Api\VKApiSaveFileException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Docs {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Docs constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Docs
+{
 	/**
 	 * Copies a document to a user's or community's document list.
 	 *
@@ -42,7 +26,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function add($access_token, array $params = []) {
+	public function add(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.add', $access_token, $params);
 	}
 
@@ -59,7 +44,8 @@ class Docs {
 	 * @throws VKApiParamDocIdException Invalid document id
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.delete', $access_token, $params);
 	}
 
@@ -79,7 +65,8 @@ class Docs {
 	 * @throws VKApiParamDocTitleException Invalid document title
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.edit', $access_token, $params);
 	}
 
@@ -96,7 +83,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.get', $access_token, $params);
 	}
 
@@ -110,7 +98,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.getById', $access_token, $params);
 	}
 
@@ -126,7 +115,8 @@ class Docs {
 	 * @throws VKApiMessagesDenySendException Can't send messages for users without permission
 	 * @return mixed
 	 */
-	public function getMessagesUploadServer($access_token, array $params = []) {
+	public function getMessagesUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.getMessagesUploadServer', $access_token, $params);
 	}
 
@@ -140,7 +130,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getTypes($access_token, array $params = []) {
+	public function getTypes(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.getTypes', $access_token, $params);
 	}
 
@@ -154,7 +145,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUploadServer($access_token, array $params = []) {
+	public function getUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.getUploadServer', $access_token, $params);
 	}
 
@@ -168,7 +160,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getWallUploadServer($access_token, array $params = []) {
+	public function getWallUploadServer(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.getWallUploadServer', $access_token, $params);
 	}
 
@@ -185,7 +178,8 @@ class Docs {
 	 * @throws VKApiSaveFileException Couldn't save file
 	 * @return mixed
 	 */
-	public function save($access_token, array $params = []) {
+	public function save(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.save', $access_token, $params);
 	}
 
@@ -202,7 +196,8 @@ class Docs {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('docs.search', $access_token, $params);
 	}
 }

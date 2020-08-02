@@ -1,33 +1,17 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\PagesEdit;
 use VK\Actions\Enums\PagesView;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiAccessPageException;
 use VK\Exceptions\Api\VKApiParamPageIdException;
 use VK\Exceptions\Api\VKApiParamTitleException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Pages {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Pages constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Pages
+{
 	/**
 	 * Allows to clear the cache of particular 'external' pages which may be attached to VK posts.
 	 *
@@ -38,7 +22,8 @@ class Pages {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function clearCache($access_token, array $params = []) {
+	public function clearCache(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.clearCache', $access_token, $params);
 	}
 
@@ -58,7 +43,8 @@ class Pages {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.get', $access_token, $params);
 	}
 
@@ -76,7 +62,8 @@ class Pages {
 	 * @throws VKApiParamPageIdException Page not found
 	 * @return mixed
 	 */
-	public function getHistory($access_token, array $params = []) {
+	public function getHistory(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.getHistory', $access_token, $params);
 	}
 
@@ -91,7 +78,8 @@ class Pages {
 	 * @throws VKApiAccessPageException Access to page denied
 	 * @return mixed
 	 */
-	public function getTitles($access_token, array $params = []) {
+	public function getTitles(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.getTitles', $access_token, $params);
 	}
 
@@ -109,7 +97,8 @@ class Pages {
 	 * @throws VKApiAccessPageException Access to page denied
 	 * @return mixed
 	 */
-	public function getVersion($access_token, array $params = []) {
+	public function getVersion(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.getVersion', $access_token, $params);
 	}
 
@@ -124,7 +113,8 @@ class Pages {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function parseWiki($access_token, array $params = []) {
+	public function parseWiki(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.parseWiki', $access_token, $params);
 	}
 
@@ -145,7 +135,8 @@ class Pages {
 	 * @throws VKApiParamTitleException Invalid title
 	 * @return mixed
 	 */
-	public function save($access_token, array $params = []) {
+	public function save(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.save', $access_token, $params);
 	}
 
@@ -165,7 +156,8 @@ class Pages {
 	 * @throws VKApiParamPageIdException Page not found
 	 * @return mixed
 	 */
-	public function saveAccess($access_token, array $params = []) {
+	public function saveAccess(string $access_token, array $params = [])
+	{
 		return $this->request->post('pages.saveAccess', $access_token, $params);
 	}
 }

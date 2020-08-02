@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class BoardSort {
-
-	/**
-	 */
-	const CHRONOLOGICAL = 'asc';
-
-	/**
-	 */
-	const REVERSE_CHRONOLOGICAL = 'desc';
+class BoardSort
+{
+	public const CHRONOLOGICAL = 'asc';
+	public const REVERSE_CHRONOLOGICAL = 'desc';
 }

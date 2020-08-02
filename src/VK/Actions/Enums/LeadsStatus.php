@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class LeadsStatus {
-
-	/**
-	 */
-	const BLOCKING_USERS = 2;
-
-	/**
-	 */
-	const FINISH = 1;
-
-	/**
-	 */
-	const FINISH_IN_TEST_MODE = 4;
-
-	/**
-	 */
-	const START = 0;
-
-	/**
-	 */
-	const START_IN_TEST_MODE = 3;
+class LeadsStatus
+{
+	public const BLOCKING_USERS = 2;
+	public const FINISH = 1;
+	public const FINISH_IN_TEST_MODE = 4;
+	public const START = 0;
+	public const START_IN_TEST_MODE = 3;
 }

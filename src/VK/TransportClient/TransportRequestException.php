@@ -4,6 +4,7 @@ namespace VK\TransportClient;
 
 use Exception;
 
-class TransportRequestException extends Exception {
+class TransportRequestException extends Exception
+{
 
 }

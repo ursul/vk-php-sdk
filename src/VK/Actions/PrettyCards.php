@@ -1,31 +1,15 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiPrettyCardsCardIsConnectedToPostException;
 use VK\Exceptions\Api\VKApiPrettyCardsCardNotFoundException;
 use VK\Exceptions\Api\VKApiPrettyCardsTooManyCardsException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class PrettyCards {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * PrettyCards constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class PrettyCards
+{
 	/**
 	 * @param string $access_token
 	 * @param array $params 
@@ -41,7 +25,8 @@ class PrettyCards {
 	 * @throws VKApiPrettyCardsTooManyCardsException Too many cards
 	 * @return mixed
 	 */
-	public function create($access_token, array $params = []) {
+	public function create(string $access_token, array $params = [])
+	{
 		return $this->request->post('prettyCards.create', $access_token, $params);
 	}
 
@@ -56,7 +41,8 @@ class PrettyCards {
 	 * @throws VKApiPrettyCardsCardIsConnectedToPostException Card is connected to post
 	 * @return mixed
 	 */
-	public function delete($access_token, array $params = []) {
+	public function delete(string $access_token, array $params = [])
+	{
 		return $this->request->post('prettyCards.delete', $access_token, $params);
 	}
 
@@ -76,7 +62,8 @@ class PrettyCards {
 	 * @throws VKApiPrettyCardsCardNotFoundException Card not found
 	 * @return mixed
 	 */
-	public function edit($access_token, array $params = []) {
+	public function edit(string $access_token, array $params = [])
+	{
 		return $this->request->post('prettyCards.edit', $access_token, $params);
 	}
 
@@ -90,7 +77,8 @@ class PrettyCards {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('prettyCards.get', $access_token, $params);
 	}
 
@@ -103,7 +91,8 @@ class PrettyCards {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getById($access_token, array $params = []) {
+	public function getById(string $access_token, array $params = [])
+	{
 		return $this->request->post('prettyCards.getById', $access_token, $params);
 	}
 
@@ -113,7 +102,8 @@ class PrettyCards {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUploadURL($access_token) {
+	public function getUploadURL(string $access_token)
+	{
 		return $this->request->post('prettyCards.getUploadURL', $access_token);
 	}
 }

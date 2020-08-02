@@ -1,8 +1,8 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\AppWidgetsType;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiBlockedException;
 use VK\Exceptions\Api\VKApiCompileException;
 use VK\Exceptions\Api\VKApiParamGroupIdException;
@@ -12,24 +12,8 @@ use VK\Exceptions\Api\VKApiWallAccessRepliesException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class AppWidgets {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * AppWidgets constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class AppWidgets
+{
 	/**
 	 * Allows to update community app widget
 	 *
@@ -47,7 +31,8 @@ class AppWidgets {
 	 * @throws VKApiParamGroupIdException Invalid group id
 	 * @return mixed
 	 */
-	public function update($access_token, array $params = []) {
+	public function update(string $access_token, array $params = [])
+	{
 		return $this->request->post('appWidgets.update', $access_token, $params);
 	}
 }

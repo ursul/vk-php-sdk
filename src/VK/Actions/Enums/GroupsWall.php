@@ -1,23 +1,11 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class GroupsWall {
-
-	/**
-	 */
-	const CLOSED = 3;
-
-	/**
-	 */
-	const DISABLED = 0;
-
-	/**
-	 */
-	const LIMITED = 2;
-
-	/**
-	 */
-	const OPEN = 1;
+class GroupsWall
+{
+	public const CLOSED = 3;
+	public const DISABLED = 0;
+	public const LIMITED = 2;
+	public const OPEN = 1;
 }

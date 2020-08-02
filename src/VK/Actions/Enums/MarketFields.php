@@ -1,275 +1,74 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class MarketFields {
-
-	/**
-	 */
-	const ABOUT = 'about';
-
-	/**
-	 */
-	const ACTIVITIES = 'activities';
-
-	/**
-	 */
-	const BDATE = 'bdate';
-
-	/**
-	 */
-	const BLACKLISTED_BY_ME = 'blacklisted_by_me';
-
-	/**
-	 */
-	const BLACKLISTED = 'blacklisted';
-
-	/**
-	 */
-	const BOOKS = 'books';
-
-	/**
-	 */
-	const CAN_POST = 'can_post';
-
-	/**
-	 */
-	const CAN_SEE_ALL_POSTS = 'can_see_all_posts';
-
-	/**
-	 */
-	const CAN_SEE_AUDIO = 'can_see_audio';
-
-	/**
-	 */
-	const CAN_SEND_FRIEND_REQUEST = 'can_send_friend_request';
-
-	/**
-	 */
-	const CAN_SUBSCRIBE_POSTS = 'can_subscribe_posts';
-
-	/**
-	 */
-	const CAN_WRITE_PRIVATE_MESSAGE = 'can_write_private_message';
-
-	/**
-	 */
-	const CAREER = 'career';
-
-	/**
-	 */
-	const CITY = 'city';
-
-	/**
-	 */
-	const COMMON_COUNT = 'common_count';
-
-	/**
-	 */
-	const CONNECTIONS = 'connections';
-
-	/**
-	 */
-	const CONTACTS = 'contacts';
-
-	/**
-	 */
-	const COUNTERS = 'counters';
-
-	/**
-	 */
-	const COUNTRY = 'country';
-
-	/**
-	 */
-	const CROP_PHOTO = 'crop_photo';
-
-	/**
-	 */
-	const DESCRIPTIONS = 'descriptions';
-
-	/**
-	 */
-	const DOMAIN = 'domain';
-
-	/**
-	 */
-	const EDUCATION = 'education';
-
-	/**
-	 */
-	const EXPORTS = 'exports';
-
-	/**
-	 */
-	const FOLLOWERS_COUNT = 'followers_count';
-
-	/**
-	 */
-	const FRIEND_STATUS = 'friend_status';
-
-	/**
-	 */
-	const GAMES = 'games';
-
-	/**
-	 */
-	const HAS_MOBILE = 'has_mobile';
-
-	/**
-	 */
-	const HAS_PHOTO = 'has_photo';
-
-	/**
-	 */
-	const HOME_TOWN = 'home_town';
-
-	/**
-	 */
-	const INTERESTS = 'interests';
-
-	/**
-	 */
-	const IS_FAVORITE = 'is_favorite';
-
-	/**
-	 */
-	const IS_FRIEND = 'is_friend';
-
-	/**
-	 */
-	const IS_HIDDEN_FROM_FEED = 'is_hidden_from_feed';
-
-	/**
-	 */
-	const LAST_SEEN = 'last_seen';
-
-	/**
-	 */
-	const LISTS = 'lists';
-
-	/**
-	 */
-	const MAIDEN_NAME = 'maiden_name';
-
-	/**
-	 */
-	const MILITARY = 'military';
-
-	/**
-	 */
-	const MOVIES = 'movies';
-
-	/**
-	 */
-	const MUSIC = 'music';
-
-	/**
-	 */
-	const MUTUAL = 'mutual';
-
-	/**
-	 */
-	const NICKNAME = 'nickname';
-
-	/**
-	 */
-	const OCCUPATION = 'occupation';
-
-	/**
-	 */
-	const ONLINE = 'online';
-
-	/**
-	 */
-	const PERSONAL = 'personal';
-
-	/**
-	 */
-	const PHOTO_100 = 'photo_100';
-
-	/**
-	 */
-	const PHOTO_200_ORIG = 'photo_200_orig';
-
-	/**
-	 */
-	const PHOTO_200 = 'photo_200';
-
-	/**
-	 */
-	const PHOTO_400_ORIG = 'photo_400_orig';
-
-	/**
-	 */
-	const PHOTO_50 = 'photo_50';
-
-	/**
-	 */
-	const PHOTO_ID = 'photo_id';
-
-	/**
-	 */
-	const PHOTO_MAX_ORIG = 'photo_max_orig';
-
-	/**
-	 */
-	const PHOTO_MAX = 'photo_max';
-
-	/**
-	 */
-	const QUOTES = 'quotes';
-
-	/**
-	 */
-	const RELATION = 'relation';
-
-	/**
-	 */
-	const RELATIVES = 'relatives';
-
-	/**
-	 */
-	const SCHOOLS = 'schools';
-
-	/**
-	 */
-	const SCREEN_NAME = 'screen_name';
-
-	/**
-	 */
-	const SEX = 'sex';
-
-	/**
-	 */
-	const SITE = 'site';
-
-	/**
-	 */
-	const STATUS = 'status';
-
-	/**
-	 */
-	const TIMEZONE = 'timezone';
-
-	/**
-	 */
-	const TRENDING = 'trending';
-
-	/**
-	 */
-	const TV = 'tv';
-
-	/**
-	 */
-	const UNIVERSITIES = 'universities';
-
-	/**
-	 */
-	const VERIFIED = 'verified';
-
-	/**
-	 */
-	const WALL_COMMENTS = 'wall_comments';
+class MarketFields
+{
+	public const ABOUT = 'about';
+	public const ACTIVITIES = 'activities';
+	public const BDATE = 'bdate';
+	public const BLACKLISTED_BY_ME = 'blacklisted_by_me';
+	public const BLACKLISTED = 'blacklisted';
+	public const BOOKS = 'books';
+	public const CAN_POST = 'can_post';
+	public const CAN_SEE_ALL_POSTS = 'can_see_all_posts';
+	public const CAN_SEE_AUDIO = 'can_see_audio';
+	public const CAN_SEND_FRIEND_REQUEST = 'can_send_friend_request';
+	public const CAN_SUBSCRIBE_POSTS = 'can_subscribe_posts';
+	public const CAN_WRITE_PRIVATE_MESSAGE = 'can_write_private_message';
+	public const CAREER = 'career';
+	public const CITY = 'city';
+	public const COMMON_COUNT = 'common_count';
+	public const CONNECTIONS = 'connections';
+	public const CONTACTS = 'contacts';
+	public const COUNTERS = 'counters';
+	public const COUNTRY = 'country';
+	public const CROP_PHOTO = 'crop_photo';
+	public const DESCRIPTIONS = 'descriptions';
+	public const DOMAIN = 'domain';
+	public const EDUCATION = 'education';
+	public const EXPORTS = 'exports';
+	public const FOLLOWERS_COUNT = 'followers_count';
+	public const FRIEND_STATUS = 'friend_status';
+	public const GAMES = 'games';
+	public const HAS_MOBILE = 'has_mobile';
+	public const HAS_PHOTO = 'has_photo';
+	public const HOME_TOWN = 'home_town';
+	public const INTERESTS = 'interests';
+	public const IS_FAVORITE = 'is_favorite';
+	public const IS_FRIEND = 'is_friend';
+	public const IS_HIDDEN_FROM_FEED = 'is_hidden_from_feed';
+	public const LAST_SEEN = 'last_seen';
+	public const LISTS = 'lists';
+	public const MAIDEN_NAME = 'maiden_name';
+	public const MILITARY = 'military';
+	public const MOVIES = 'movies';
+	public const MUSIC = 'music';
+	public const MUTUAL = 'mutual';
+	public const NICKNAME = 'nickname';
+	public const OCCUPATION = 'occupation';
+	public const ONLINE = 'online';
+	public const PERSONAL = 'personal';
+	public const PHOTO_100 = 'photo_100';
+	public const PHOTO_200_ORIG = 'photo_200_orig';
+	public const PHOTO_200 = 'photo_200';
+	public const PHOTO_400_ORIG = 'photo_400_orig';
+	public const PHOTO_50 = 'photo_50';
+	public const PHOTO_ID = 'photo_id';
+	public const PHOTO_MAX_ORIG = 'photo_max_orig';
+	public const PHOTO_MAX = 'photo_max';
+	public const QUOTES = 'quotes';
+	public const RELATION = 'relation';
+	public const RELATIVES = 'relatives';
+	public const SCHOOLS = 'schools';
+	public const SCREEN_NAME = 'screen_name';
+	public const SEX = 'sex';
+	public const SITE = 'site';
+	public const STATUS = 'status';
+	public const TIMEZONE = 'timezone';
+	public const TRENDING = 'trending';
+	public const TV = 'tv';
+	public const UNIVERSITIES = 'universities';
+	public const VERIFIED = 'verified';
+	public const WALL_COMMENTS = 'wall_comments';
 }

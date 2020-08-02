@@ -1,407 +1,107 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class StoriesFields {
-
-	/**
-	 */
-	const ABOUT = 'about';
-
-	/**
-	 */
-	const ACTION_BUTTON = 'action_button';
-
-	/**
-	 */
-	const ACTIVITIES = 'activities';
-
-	/**
-	 */
-	const ACTIVITY = 'activity';
-
-	/**
-	 */
-	const ADDRESSES = 'addresses';
-
-	/**
-	 */
-	const ADMIN_LEVEL = 'admin_level';
-
-	/**
-	 */
-	const AGE_LIMITS = 'age_limits';
-
-	/**
-	 */
-	const AUTHOR_ID = 'author_id';
-
-	/**
-	 */
-	const BAN_INFO = 'ban_info';
-
-	/**
-	 */
-	const BDATE = 'bdate';
-
-	/**
-	 */
-	const BLACKLISTED = 'blacklisted';
-
-	/**
-	 */
-	const BLACKLISTED_BY_ME = 'blacklisted_by_me';
-
-	/**
-	 */
-	const BOOKS = 'books';
-
-	/**
-	 */
-	const CAN_CREATE_TOPIC = 'can_create_topic';
-
-	/**
-	 */
-	const CAN_MESSAGE = 'can_message';
-
-	/**
-	 */
-	const CAN_POST = 'can_post';
-
-	/**
-	 */
-	const CAN_SEE_ALL_POSTS = 'can_see_all_posts';
-
-	/**
-	 */
-	const CAN_SEE_AUDIO = 'can_see_audio';
-
-	/**
-	 */
-	const CAN_SEND_FRIEND_REQUEST = 'can_send_friend_request';
-
-	/**
-	 */
-	const CAN_SEND_NOTIFY = 'can_send_notify';
-
-	/**
-	 */
-	const CAN_UPLOAD_VIDEO = 'can_upload_video';
-
-	/**
-	 */
-	const CAN_WRITE_PRIVATE_MESSAGE = 'can_write_private_message';
-
-	/**
-	 */
-	const CAREER = 'career';
-
-	/**
-	 */
-	const CITY = 'city';
-
-	/**
-	 */
-	const COMMON_COUNT = 'common_count';
-
-	/**
-	 */
-	const CONNECTIONS = 'connections';
-
-	/**
-	 */
-	const CONTACTS = 'contacts';
-
-	/**
-	 */
-	const COUNTERS = 'counters';
-
-	/**
-	 */
-	const COUNTRY = 'country';
-
-	/**
-	 */
-	const COVER = 'cover';
-
-	/**
-	 */
-	const CROP_PHOTO = 'crop_photo';
-
-	/**
-	 */
-	const DEACTIVATED = 'deactivated';
-
-	/**
-	 */
-	const DESCRIPTION = 'description';
-
-	/**
-	 */
-	const DOMAIN = 'domain';
-
-	/**
-	 */
-	const EDUCATION = 'education';
-
-	/**
-	 */
-	const EXPORTS = 'exports';
-
-	/**
-	 */
-	const FINISH_DATE = 'finish_date';
-
-	/**
-	 */
-	const FIXED_POST = 'fixed_post';
-
-	/**
-	 */
-	const FOLLOWERS_COUNT = 'followers_count';
-
-	/**
-	 */
-	const FRIEND_STATUS = 'friend_status';
-
-	/**
-	 */
-	const GAMES = 'games';
-
-	/**
-	 */
-	const HAS_MARKET_APP = 'has_market_app';
-
-	/**
-	 */
-	const HAS_MOBILE = 'has_mobile';
-
-	/**
-	 */
-	const HAS_PHOTO = 'has_photo';
-
-	/**
-	 */
-	const HOME_TOWN = 'home_town';
-
-	/**
-	 */
-	const ID = 'id';
-
-	/**
-	 */
-	const INTERESTS = 'interests';
-
-	/**
-	 */
-	const IS_ADMIN = 'is_admin';
-
-	/**
-	 */
-	const IS_CLOSED = 'is_closed';
-
-	/**
-	 */
-	const IS_FAVORITE = 'is_favorite';
-
-	/**
-	 */
-	const IS_FRIEND = 'is_friend';
-
-	/**
-	 */
-	const IS_HIDDEN_FROM_FEED = 'is_hidden_from_feed';
-
-	/**
-	 */
-	const IS_MEMBER = 'is_member';
-
-	/**
-	 */
-	const IS_MESSAGES_BLOCKED = 'is_messages_blocked';
-
-	/**
-	 */
-	const IS_SUBSCRIBED = 'is_subscribed';
-
-	/**
-	 */
-	const LAST_SEEN = 'last_seen';
-
-	/**
-	 */
-	const LINKS = 'links';
-
-	/**
-	 */
-	const LISTS = 'lists';
-
-	/**
-	 */
-	const MAIDEN_NAME = 'maiden_name';
-
-	/**
-	 */
-	const MAIN_ALBUM_ID = 'main_album_id';
-
-	/**
-	 */
-	const MAIN_SECTION = 'main_section';
-
-	/**
-	 */
-	const MARKET = 'market';
-
-	/**
-	 */
-	const MEMBER_STATUS = 'member_status';
-
-	/**
-	 */
-	const MEMBERS_COUNT = 'members_count';
-
-	/**
-	 */
-	const MILITARY = 'military';
-
-	/**
-	 */
-	const MOVIES = 'movies';
-
-	/**
-	 */
-	const MUSIC = 'music';
-
-	/**
-	 */
-	const NAME = 'name';
-
-	/**
-	 */
-	const NICKNAME = 'nickname';
-
-	/**
-	 */
-	const OCCUPATION = 'occupation';
-
-	/**
-	 */
-	const ONLINE = 'online';
-
-	/**
-	 */
-	const ONLINE_STATUS = 'online_status';
-
-	/**
-	 */
-	const PERSONAL = 'personal';
-
-	/**
-	 */
-	const PHONE = 'phone';
-
-	/**
-	 */
-	const PHOTO_100 = 'photo_100';
-
-	/**
-	 */
-	const PHOTO_200_ORIG = 'photo_200_orig';
-
-	/**
-	 */
-	const PHOTO_200 = 'photo_200';
-
-	/**
-	 */
-	const PHOTO_400_ORIG = 'photo_400_orig';
-
-	/**
-	 */
-	const PHOTO_50 = 'photo_50';
-
-	/**
-	 */
-	const PHOTO_ID = 'photo_id';
-
-	/**
-	 */
-	const PHOTO_MAX = 'photo_max';
-
-	/**
-	 */
-	const PHOTO_MAX_ORIG = 'photo_max_orig';
-
-	/**
-	 */
-	const QUOTES = 'quotes';
-
-	/**
-	 */
-	const RELATION = 'relation';
-
-	/**
-	 */
-	const RELATIVES = 'relatives';
-
-	/**
-	 */
-	const SCHOOLS = 'schools';
-
-	/**
-	 */
-	const SCREEN_NAME = 'screen_name';
-
-	/**
-	 */
-	const SEX = 'sex';
-
-	/**
-	 */
-	const SITE = 'site';
-
-	/**
-	 */
-	const START_DATE = 'start_date';
-
-	/**
-	 */
-	const STATUS = 'status';
-
-	/**
-	 */
-	const TIMEZONE = 'timezone';
-
-	/**
-	 */
-	const TRENDING = 'trending';
-
-	/**
-	 */
-	const TV = 'tv';
-
-	/**
-	 */
-	const TYPE = 'type';
-
-	/**
-	 */
-	const UNIVERSITIES = 'universities';
-
-	/**
-	 */
-	const VERIFIED = 'verified';
-
-	/**
-	 */
-	const VK_ADMIN_STATUS = 'vk_admin_status';
-
-	/**
-	 */
-	const WALL_COMMENTS = 'wall_comments';
-
-	/**
-	 */
-	const WIKI_PAGE = 'wiki_page';
+class StoriesFields
+{
+	public const ABOUT = 'about';
+	public const ACTION_BUTTON = 'action_button';
+	public const ACTIVITIES = 'activities';
+	public const ACTIVITY = 'activity';
+	public const ADDRESSES = 'addresses';
+	public const ADMIN_LEVEL = 'admin_level';
+	public const AGE_LIMITS = 'age_limits';
+	public const AUTHOR_ID = 'author_id';
+	public const BAN_INFO = 'ban_info';
+	public const BDATE = 'bdate';
+	public const BLACKLISTED = 'blacklisted';
+	public const BLACKLISTED_BY_ME = 'blacklisted_by_me';
+	public const BOOKS = 'books';
+	public const CAN_CREATE_TOPIC = 'can_create_topic';
+	public const CAN_MESSAGE = 'can_message';
+	public const CAN_POST = 'can_post';
+	public const CAN_SEE_ALL_POSTS = 'can_see_all_posts';
+	public const CAN_SEE_AUDIO = 'can_see_audio';
+	public const CAN_SEND_FRIEND_REQUEST = 'can_send_friend_request';
+	public const CAN_SEND_NOTIFY = 'can_send_notify';
+	public const CAN_UPLOAD_VIDEO = 'can_upload_video';
+	public const CAN_WRITE_PRIVATE_MESSAGE = 'can_write_private_message';
+	public const CAREER = 'career';
+	public const CITY = 'city';
+	public const COMMON_COUNT = 'common_count';
+	public const CONNECTIONS = 'connections';
+	public const CONTACTS = 'contacts';
+	public const COUNTERS = 'counters';
+	public const COUNTRY = 'country';
+	public const COVER = 'cover';
+	public const CROP_PHOTO = 'crop_photo';
+	public const DEACTIVATED = 'deactivated';
+	public const DESCRIPTION = 'description';
+	public const DOMAIN = 'domain';
+	public const EDUCATION = 'education';
+	public const EXPORTS = 'exports';
+	public const FINISH_DATE = 'finish_date';
+	public const FIXED_POST = 'fixed_post';
+	public const FOLLOWERS_COUNT = 'followers_count';
+	public const FRIEND_STATUS = 'friend_status';
+	public const GAMES = 'games';
+	public const HAS_MARKET_APP = 'has_market_app';
+	public const HAS_MOBILE = 'has_mobile';
+	public const HAS_PHOTO = 'has_photo';
+	public const HOME_TOWN = 'home_town';
+	public const ID = 'id';
+	public const INTERESTS = 'interests';
+	public const IS_ADMIN = 'is_admin';
+	public const IS_CLOSED = 'is_closed';
+	public const IS_FAVORITE = 'is_favorite';
+	public const IS_FRIEND = 'is_friend';
+	public const IS_HIDDEN_FROM_FEED = 'is_hidden_from_feed';
+	public const IS_MEMBER = 'is_member';
+	public const IS_MESSAGES_BLOCKED = 'is_messages_blocked';
+	public const IS_SUBSCRIBED = 'is_subscribed';
+	public const LAST_SEEN = 'last_seen';
+	public const LINKS = 'links';
+	public const LISTS = 'lists';
+	public const MAIDEN_NAME = 'maiden_name';
+	public const MAIN_ALBUM_ID = 'main_album_id';
+	public const MAIN_SECTION = 'main_section';
+	public const MARKET = 'market';
+	public const MEMBER_STATUS = 'member_status';
+	public const MEMBERS_COUNT = 'members_count';
+	public const MILITARY = 'military';
+	public const MOVIES = 'movies';
+	public const MUSIC = 'music';
+	public const NAME = 'name';
+	public const NICKNAME = 'nickname';
+	public const OCCUPATION = 'occupation';
+	public const ONLINE = 'online';
+	public const ONLINE_STATUS = 'online_status';
+	public const PERSONAL = 'personal';
+	public const PHONE = 'phone';
+	public const PHOTO_100 = 'photo_100';
+	public const PHOTO_200_ORIG = 'photo_200_orig';
+	public const PHOTO_200 = 'photo_200';
+	public const PHOTO_400_ORIG = 'photo_400_orig';
+	public const PHOTO_50 = 'photo_50';
+	public const PHOTO_ID = 'photo_id';
+	public const PHOTO_MAX = 'photo_max';
+	public const PHOTO_MAX_ORIG = 'photo_max_orig';
+	public const QUOTES = 'quotes';
+	public const RELATION = 'relation';
+	public const RELATIVES = 'relatives';
+	public const SCHOOLS = 'schools';
+	public const SCREEN_NAME = 'screen_name';
+	public const SEX = 'sex';
+	public const SITE = 'site';
+	public const START_DATE = 'start_date';
+	public const STATUS = 'status';
+	public const TIMEZONE = 'timezone';
+	public const TRENDING = 'trending';
+	public const TV = 'tv';
+	public const TYPE = 'type';
+	public const UNIVERSITIES = 'universities';
+	public const VERIFIED = 'verified';
+	public const VK_ADMIN_STATUS = 'vk_admin_status';
+	public const WALL_COMMENTS = 'wall_comments';
+	public const WIKI_PAGE = 'wiki_page';
 }

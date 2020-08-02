@@ -1,31 +1,13 @@
 <?php
+
 namespace VK\Actions\Enums\Newsfeed;
 
-/**
- */
-class IgnoreItemType {
-
-	/**
-	 */
-	const AUDIO = 'audio';
-
-	/**
-	 */
-	const PHOTO = 'photo';
-
-	/**
-	 */
-	const POST_ON_THE_WALL = 'wall';
-
-	/**
-	 */
-	const PROFILE_PHOTO = 'profilephoto';
-
-	/**
-	 */
-	const TAG_ON_A_PHOTO = 'tag';
-
-	/**
-	 */
-	const VIDEO = 'video';
+class IgnoreItemType
+{
+	public const AUDIO = 'audio';
+	public const PHOTO = 'photo';
+	public const POST_ON_THE_WALL = 'wall';
+	public const PROFILE_PHOTO = 'profilephoto';
+	public const TAG_ON_A_PHOTO = 'tag';
+	public const VIDEO = 'video';
 }

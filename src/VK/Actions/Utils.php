@@ -1,31 +1,15 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\UtilsInterval;
 use VK\Actions\Enums\UtilsSource;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiNotFoundException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Utils {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Utils constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Utils
+{
 	/**
 	 * Checks whether a link is blocked in VK.
 	 *
@@ -36,7 +20,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function checkLink($access_token, array $params = []) {
+	public function checkLink(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.checkLink', $access_token, $params);
 	}
 
@@ -50,7 +35,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteFromLastShortened($access_token, array $params = []) {
+	public function deleteFromLastShortened(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.deleteFromLastShortened', $access_token, $params);
 	}
 
@@ -65,7 +51,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getLastShortenedLinks($access_token, array $params = []) {
+	public function getLastShortenedLinks(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.getLastShortenedLinks', $access_token, $params);
 	}
 
@@ -85,7 +72,8 @@ class Utils {
 	 * @throws VKApiNotFoundException Not found
 	 * @return mixed
 	 */
-	public function getLinkStats($access_token, array $params = []) {
+	public function getLinkStats(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.getLinkStats', $access_token, $params);
 	}
 
@@ -97,7 +85,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getServerTime($access_token) {
+	public function getServerTime(string $access_token)
+	{
 		return $this->request->post('utils.getServerTime', $access_token);
 	}
 
@@ -112,7 +101,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getShortLink($access_token, array $params = []) {
+	public function getShortLink(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.getShortLink', $access_token, $params);
 	}
 
@@ -126,7 +116,8 @@ class Utils {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function resolveScreenName($access_token, array $params = []) {
+	public function resolveScreenName(string $access_token, array $params = [])
+	{
 		return $this->request->post('utils.resolveScreenName', $access_token, $params);
 	}
 }

@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AdsPeriod {
-
-	/**
-	 */
-	const DAY = 'day';
-
-	/**
-	 */
-	const MONTH = 'month';
-
-	/**
-	 */
-	const OVERALL = 'overall';
+class AdsPeriod
+{
+	public const DAY = 'day';
+	public const MONTH = 'month';
+	public const OVERALL = 'overall';
 }

@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AdsLang {
-
-	/**
-	 */
-	const ENGLISH = 'en';
-
-	/**
-	 */
-	const RUSSIAN = 'ru';
-
-	/**
-	 */
-	const UKRAINIAN = 'ua';
+class AdsLang
+{
+	public const ENGLISH = 'en';
+	public const RUSSIAN = 'ru';
+	public const UKRAINIAN = 'ua';
 }

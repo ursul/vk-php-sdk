@@ -1,4 +1,5 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\UsersNameCase;
@@ -6,28 +7,11 @@ use VK\Actions\Enums\UsersSex;
 use VK\Actions\Enums\UsersSort;
 use VK\Actions\Enums\UsersStatus;
 use VK\Actions\Enums\UsersType;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Users {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Users constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Users
+{
 	/**
 	 * Returns detailed information on users.
 	 *
@@ -40,7 +24,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.get', $access_token, $params);
 	}
 
@@ -58,7 +43,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getFollowers($access_token, array $params = []) {
+	public function getFollowers(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.getFollowers', $access_token, $params);
 	}
 
@@ -76,7 +62,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getSubscriptions($access_token, array $params = []) {
+	public function getSubscriptions(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.getSubscriptions', $access_token, $params);
 	}
 
@@ -90,7 +77,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function isAppUser($access_token, array $params = []) {
+	public function isAppUser(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.isAppUser', $access_token, $params);
 	}
 
@@ -106,7 +94,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function report($access_token, array $params = []) {
+	public function report(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.report', $access_token, $params);
 	}
 
@@ -152,7 +141,8 @@ class Users {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function search($access_token, array $params = []) {
+	public function search(string $access_token, array $params = [])
+	{
 		return $this->request->post('users.search', $access_token, $params);
 	}
 }

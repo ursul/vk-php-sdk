@@ -1,31 +1,15 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\BoardOrder;
 use VK\Actions\Enums\BoardPreview;
 use VK\Actions\Enums\BoardSort;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Board {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Board constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Board
+{
 	/**
 	 * Creates a new topic on a community's discussion board.
 	 *
@@ -40,7 +24,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function addTopic($access_token, array $params = []) {
+	public function addTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.addTopic', $access_token, $params);
 	}
 
@@ -55,7 +40,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function closeTopic($access_token, array $params = []) {
+	public function closeTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.closeTopic', $access_token, $params);
 	}
 
@@ -75,7 +61,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function createComment($access_token, array $params = []) {
+	public function createComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.createComment', $access_token, $params);
 	}
 
@@ -91,7 +78,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteComment($access_token, array $params = []) {
+	public function deleteComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.deleteComment', $access_token, $params);
 	}
 
@@ -106,7 +94,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function deleteTopic($access_token, array $params = []) {
+	public function deleteTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.deleteTopic', $access_token, $params);
 	}
 
@@ -124,7 +113,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editComment($access_token, array $params = []) {
+	public function editComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.editComment', $access_token, $params);
 	}
 
@@ -140,7 +130,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function editTopic($access_token, array $params = []) {
+	public function editTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.editTopic', $access_token, $params);
 	}
 
@@ -155,7 +146,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function fixTopic($access_token, array $params = []) {
+	public function fixTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.fixTopic', $access_token, $params);
 	}
 
@@ -176,7 +168,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getComments($access_token, array $params = []) {
+	public function getComments(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.getComments', $access_token, $params);
 	}
 
@@ -197,7 +190,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getTopics($access_token, array $params = []) {
+	public function getTopics(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.getTopics', $access_token, $params);
 	}
 
@@ -212,7 +206,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function openTopic($access_token, array $params = []) {
+	public function openTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.openTopic', $access_token, $params);
 	}
 
@@ -228,7 +223,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function restoreComment($access_token, array $params = []) {
+	public function restoreComment(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.restoreComment', $access_token, $params);
 	}
 
@@ -243,7 +239,8 @@ class Board {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unfixTopic($access_token, array $params = []) {
+	public function unfixTopic(string $access_token, array $params = [])
+	{
 		return $this->request->post('board.unfixTopic', $access_token, $params);
 	}
 }

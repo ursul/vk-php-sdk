@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums\Groups;
 
-/**
- */
-class GroupAgeLimits {
-
-	/**
-	 */
-	const _16_PLUS = 2;
-
-	/**
-	 */
-	const _18_PLUS = 3;
-
-	/**
-	 */
-	const UNLIMITED = 1;
+class GroupAgeLimits
+{
+	public const _16_PLUS = 2;
+	public const _18_PLUS = 3;
+	public const UNLIMITED = 1;
 }

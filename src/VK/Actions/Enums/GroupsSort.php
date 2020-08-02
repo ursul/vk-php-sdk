@@ -1,31 +1,13 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class GroupsSort {
-
-	/**
-	 */
-	const _DEFAULT = 0;
-
-	/**
-	 */
-	const ATTENDANCE = 2;
-
-	/**
-	 */
-	const COMMENTS = 4;
-
-	/**
-	 */
-	const ENTRIES = 5;
-
-	/**
-	 */
-	const GROWTH = 1;
-
-	/**
-	 */
-	const LIKES = 3;
+class GroupsSort
+{
+	public const _DEFAULT = 0;
+	public const ATTENDANCE = 2;
+	public const COMMENTS = 4;
+	public const ENTRIES = 5;
+	public const GROWTH = 1;
+	public const LIKES = 3;
 }

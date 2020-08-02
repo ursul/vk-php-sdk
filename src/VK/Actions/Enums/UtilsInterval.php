@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class UtilsInterval {
-
-	/**
-	 */
-	const DAY = 'day';
-
-	/**
-	 */
-	const FOREVER = 'forever';
-
-	/**
-	 */
-	const HOUR = 'hour';
-
-	/**
-	 */
-	const MONTH = 'month';
-
-	/**
-	 */
-	const WEEK = 'week';
+class UtilsInterval
+{
+	public const DAY = 'day';
+	public const FOREVER = 'forever';
+	public const HOUR = 'hour';
+	public const MONTH = 'month';
+	public const WEEK = 'week';
 }

@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AdsLinkType {
-
-	/**
-	 */
-	const APPLICATION = 'application';
-
-	/**
-	 */
-	const COMMUNITY = 'community';
-
-	/**
-	 */
-	const POST = 'post';
-
-	/**
-	 */
-	const SITE = 'site';
-
-	/**
-	 */
-	const VIDEO = 'video';
+class AdsLinkType
+{
+	public const APPLICATION = 'application';
+	public const COMMUNITY = 'community';
+	public const POST = 'post';
+	public const SITE = 'site';
+	public const VIDEO = 'video';
 }

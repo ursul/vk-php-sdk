@@ -1,23 +1,11 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AppsPlatform {
-
-	/**
-	 */
-	const ANDROID = 'android';
-
-	/**
-	 */
-	const IOS = 'ios';
-
-	/**
-	 */
-	const WEB = 'web';
-
-	/**
-	 */
-	const WINPHONE = 'winphone';
+class AppsPlatform
+{
+	public const ANDROID = 'android';
+	public const IOS = 'ios';
+	public const WEB = 'web';
+	public const WINPHONE = 'winphone';
 }

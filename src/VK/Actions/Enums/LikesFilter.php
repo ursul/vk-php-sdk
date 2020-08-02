@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class LikesFilter {
-
-	/**
-	 */
-	const COPIES = 'copies';
-
-	/**
-	 */
-	const LIKES = 'likes';
+class LikesFilter
+{
+	public const COPIES = 'copies';
+	public const LIKES = 'likes';
 }

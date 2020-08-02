@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class PhotosSort {
-
-	/**
-	 */
-	const NEW_FIRST = 'desc';
-
-	/**
-	 */
-	const OLD_FIRST = 'asc';
+class PhotosSort
+{
+	public const NEW_FIRST = 'desc';
+	public const OLD_FIRST = 'asc';
 }

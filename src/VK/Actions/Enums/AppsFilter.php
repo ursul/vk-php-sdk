@@ -1,23 +1,11 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AppsFilter {
-
-	/**
-	 */
-	const _NEW = 'new';
-
-	/**
-	 */
-	const FAVORITE = 'favorite';
-
-	/**
-	 */
-	const FEATURED = 'featured';
-
-	/**
-	 */
-	const INSTALLED = 'installed';
+class AppsFilter
+{
+	public const _NEW = 'new';
+	public const FAVORITE = 'favorite';
+	public const FEATURED = 'featured';
+	public const INSTALLED = 'installed';
 }

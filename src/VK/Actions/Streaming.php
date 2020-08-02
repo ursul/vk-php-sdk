@@ -1,29 +1,13 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\StreamingMonthlyTier;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Streaming {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Streaming constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Streaming
+{
 	/**
 	 * Allows to receive data for the connection to Streaming API.
 	 *
@@ -32,7 +16,8 @@ class Streaming {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getServerUrl($access_token) {
+	public function getServerUrl(string $access_token)
+	{
 		return $this->request->post('streaming.getServerUrl', $access_token);
 	}
 
@@ -44,7 +29,8 @@ class Streaming {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setSettings($access_token, array $params = []) {
+	public function setSettings(string $access_token, array $params = [])
+	{
 		return $this->request->post('streaming.setSettings', $access_token, $params);
 	}
 }

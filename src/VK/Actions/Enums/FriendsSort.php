@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class FriendsSort {
-
-	/**
-	 */
-	const DATE = 0;
-
-	/**
-	 */
-	const MUTUAL = 1;
+class FriendsSort
+{
+	public const DATE = 0;
+	public const MUTUAL = 1;
 }

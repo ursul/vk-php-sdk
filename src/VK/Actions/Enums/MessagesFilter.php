@@ -1,31 +1,13 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class MessagesFilter {
-
-	/**
-	 */
-	const ALL = 'all';
-
-	/**
-	 */
-	const BUSINESS_NOTIFY = 'business_notify';
-
-	/**
-	 */
-	const IMPORTANT = 'important';
-
-	/**
-	 */
-	const MESSAGE_REQUEST = 'message_request';
-
-	/**
-	 */
-	const UNANSWERED = 'unanswered';
-
-	/**
-	 */
-	const UNREAD = 'unread';
+class MessagesFilter
+{
+	public const ALL = 'all';
+	public const BUSINESS_NOTIFY = 'business_notify';
+	public const IMPORTANT = 'important';
+	public const MESSAGE_REQUEST = 'message_request';
+	public const UNANSWERED = 'unanswered';
+	public const UNREAD = 'unread';
 }

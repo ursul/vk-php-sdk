@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class MarketRev {
-
-	/**
-	 */
-	const NORMAL = 0;
-
-	/**
-	 */
-	const REVERSE = 1;
+class MarketRev
+{
+	public const NORMAL = 0;
+	public const REVERSE = 1;
 }

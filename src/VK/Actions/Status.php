@@ -1,29 +1,13 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiStatusNoAudioException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Status {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Status constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Status
+{
 	/**
 	 * Returns data required to show the status of a user or community.
 	 *
@@ -35,7 +19,8 @@ class Status {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('status.get', $access_token, $params);
 	}
 
@@ -51,7 +36,8 @@ class Status {
 	 * @throws VKApiStatusNoAudioException User disabled track name broadcast
 	 * @return mixed
 	 */
-	public function set($access_token, array $params = []) {
+	public function set(string $access_token, array $params = [])
+	{
 		return $this->request->post('status.set', $access_token, $params);
 	}
 }

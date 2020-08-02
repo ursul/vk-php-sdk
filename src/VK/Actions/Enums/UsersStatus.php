@@ -1,39 +1,15 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class UsersStatus {
-
-	/**
-	 */
-	const ACTIVELY_SEARCHING = 6;
-
-	/**
-	 */
-	const COMPLICATED = 5;
-
-	/**
-	 */
-	const ENGAGED = 3;
-
-	/**
-	 */
-	const IN_LOVE = 7;
-
-	/**
-	 */
-	const MARRIED = 4;
-
-	/**
-	 */
-	const NOT_MARRIED = 1;
-
-	/**
-	 */
-	const NOT_SPECIFIED = 0;
-
-	/**
-	 */
-	const RELATIONSHIP = 2;
+class UsersStatus
+{
+	public const ACTIVELY_SEARCHING = 6;
+	public const COMPLICATED = 5;
+	public const ENGAGED = 3;
+	public const IN_LOVE = 7;
+	public const MARRIED = 4;
+	public const NOT_MARRIED = 1;
+	public const NOT_SPECIFIED = 0;
+	public const RELATIONSHIP = 2;
 }

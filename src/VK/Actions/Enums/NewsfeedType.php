@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class NewsfeedType {
-
-	/**
-	 */
-	const NOTE = 'note';
-
-	/**
-	 */
-	const PHOTO = 'photo';
-
-	/**
-	 */
-	const POST = 'post';
-
-	/**
-	 */
-	const TOPIC = 'topic';
-
-	/**
-	 */
-	const VIDEO = 'video';
+class NewsfeedType
+{
+	public const NOTE = 'note';
+	public const PHOTO = 'photo';
+	public const POST = 'post';
+	public const TOPIC = 'topic';
+	public const VIDEO = 'video';
 }

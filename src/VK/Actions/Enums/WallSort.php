@@ -1,15 +1,9 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class WallSort {
-
-	/**
-	 */
-	const CHRONOLOGICAL = 'asc';
-
-	/**
-	 */
-	const REVERSE_CHRONOLOGICAL = 'desc';
+class WallSort
+{
+	public const CHRONOLOGICAL = 'asc';
+	public const REVERSE_CHRONOLOGICAL = 'desc';
 }

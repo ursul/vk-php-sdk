@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class BoardPreview {
-
-	/**
-	 */
-	const FIRST = 1;
-
-	/**
-	 */
-	const LAST = 2;
-
-	/**
-	 */
-	const NONE = 0;
+class BoardPreview
+{
+	public const FIRST = 1;
+	public const LAST = 2;
+	public const NONE = 0;
 }

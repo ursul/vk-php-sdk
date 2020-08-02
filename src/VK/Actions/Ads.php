@@ -1,4 +1,5 @@
 <?php
+
 namespace VK\Actions;
 
 use VK\Actions\Enums\AdsAdFormat;
@@ -7,31 +8,14 @@ use VK\Actions\Enums\AdsLang;
 use VK\Actions\Enums\AdsLinkType;
 use VK\Actions\Enums\AdsPeriod;
 use VK\Actions\Enums\AdsSection;
-use VK\Client\VKApiRequest;
 use VK\Exceptions\Api\VKApiAdsObjectDeletedException;
 use VK\Exceptions\Api\VKApiAdsPartialSuccessException;
 use VK\Exceptions\Api\VKApiWeightedFloodException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Ads {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Ads constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Ads
+{
 	/**
 	 * Adds managers and/or supervisors to advertising account.
 	 *
@@ -44,7 +28,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function addOfficeUsers($access_token, array $params = []) {
+	public function addOfficeUsers(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.addOfficeUsers', $access_token, $params);
 	}
 
@@ -61,7 +46,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function checkLink($access_token, array $params = []) {
+	public function checkLink(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.checkLink', $access_token, $params);
 	}
 
@@ -78,7 +64,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function createAds($access_token, array $params = []) {
+	public function createAds(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.createAds', $access_token, $params);
 	}
 
@@ -95,7 +82,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function createCampaigns($access_token, array $params = []) {
+	public function createCampaigns(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.createCampaigns', $access_token, $params);
 	}
 
@@ -112,7 +100,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function createClients($access_token, array $params = []) {
+	public function createClients(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.createClients', $access_token, $params);
 	}
 
@@ -132,7 +121,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function createTargetGroup($access_token, array $params = []) {
+	public function createTargetGroup(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.createTargetGroup', $access_token, $params);
 	}
 
@@ -150,7 +140,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function deleteAds($access_token, array $params = []) {
+	public function deleteAds(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.deleteAds', $access_token, $params);
 	}
 
@@ -168,7 +159,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function deleteCampaigns($access_token, array $params = []) {
+	public function deleteCampaigns(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.deleteCampaigns', $access_token, $params);
 	}
 
@@ -186,7 +178,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function deleteClients($access_token, array $params = []) {
+	public function deleteClients(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.deleteClients', $access_token, $params);
 	}
 
@@ -203,7 +196,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function deleteTargetGroup($access_token, array $params = []) {
+	public function deleteTargetGroup(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.deleteTargetGroup', $access_token, $params);
 	}
 
@@ -215,7 +209,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getAccounts($access_token) {
+	public function getAccounts(string $access_token)
+	{
 		return $this->request->post('ads.getAccounts', $access_token);
 	}
 
@@ -236,7 +231,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getAds($access_token, array $params = []) {
+	public function getAds(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getAds', $access_token, $params);
 	}
 
@@ -257,7 +253,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getAdsLayout($access_token, array $params = []) {
+	public function getAdsLayout(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getAdsLayout', $access_token, $params);
 	}
 
@@ -278,7 +275,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getAdsTargeting($access_token, array $params = []) {
+	public function getAdsTargeting(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getAdsTargeting', $access_token, $params);
 	}
 
@@ -293,7 +291,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getBudget($access_token, array $params = []) {
+	public function getBudget(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getBudget', $access_token, $params);
 	}
 
@@ -311,7 +310,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getCampaigns($access_token, array $params = []) {
+	public function getCampaigns(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getCampaigns', $access_token, $params);
 	}
 
@@ -325,7 +325,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getCategories($access_token, array $params = []) {
+	public function getCategories(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getCategories', $access_token, $params);
 	}
 
@@ -340,7 +341,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getClients($access_token, array $params = []) {
+	public function getClients(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getClients', $access_token, $params);
 	}
 
@@ -360,7 +362,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getDemographics($access_token, array $params = []) {
+	public function getDemographics(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getDemographics', $access_token, $params);
 	}
 
@@ -374,7 +377,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getFloodStats($access_token, array $params = []) {
+	public function getFloodStats(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getFloodStats', $access_token, $params);
 	}
 
@@ -389,7 +393,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getOfficeUsers($access_token, array $params = []) {
+	public function getOfficeUsers(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getOfficeUsers', $access_token, $params);
 	}
 
@@ -406,7 +411,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getPostsReach($access_token, array $params = []) {
+	public function getPostsReach(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getPostsReach', $access_token, $params);
 	}
 
@@ -422,7 +428,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getRejectionReason($access_token, array $params = []) {
+	public function getRejectionReason(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getRejectionReason', $access_token, $params);
 	}
 
@@ -442,7 +449,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getStatistics($access_token, array $params = []) {
+	public function getStatistics(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getStatistics', $access_token, $params);
 	}
 
@@ -461,7 +469,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getSuggestions($access_token, array $params = []) {
+	public function getSuggestions(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getSuggestions', $access_token, $params);
 	}
 
@@ -478,7 +487,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getTargetGroups($access_token, array $params = []) {
+	public function getTargetGroups(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getTargetGroups', $access_token, $params);
 	}
 
@@ -502,7 +512,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function getTargetingStats($access_token, array $params = []) {
+	public function getTargetingStats(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getTargetingStats', $access_token, $params);
 	}
 
@@ -517,7 +528,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getUploadURL($access_token, array $params = []) {
+	public function getUploadURL(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.getUploadURL', $access_token, $params);
 	}
 
@@ -529,7 +541,8 @@ class Ads {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getVideoUploadURL($access_token) {
+	public function getVideoUploadURL(string $access_token)
+	{
 		return $this->request->post('ads.getVideoUploadURL', $access_token);
 	}
 
@@ -547,7 +560,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function importTargetContacts($access_token, array $params = []) {
+	public function importTargetContacts(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.importTargetContacts', $access_token, $params);
 	}
 
@@ -563,7 +577,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function removeOfficeUsers($access_token, array $params = []) {
+	public function removeOfficeUsers(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.removeOfficeUsers', $access_token, $params);
 	}
 
@@ -579,7 +594,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function updateAds($access_token, array $params = []) {
+	public function updateAds(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.updateAds', $access_token, $params);
 	}
 
@@ -596,7 +612,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function updateCampaigns($access_token, array $params = []) {
+	public function updateCampaigns(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.updateCampaigns', $access_token, $params);
 	}
 
@@ -612,7 +629,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function updateClients($access_token, array $params = []) {
+	public function updateClients(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.updateClients', $access_token, $params);
 	}
 
@@ -634,7 +652,8 @@ class Ads {
 	 * @throws VKApiWeightedFloodException Permission denied. You have requested too many actions this day. Try later.
 	 * @return mixed
 	 */
-	public function updateTargetGroup($access_token, array $params = []) {
+	public function updateTargetGroup(string $access_token, array $params = [])
+	{
 		return $this->request->post('ads.updateTargetGroup', $access_token, $params);
 	}
 }

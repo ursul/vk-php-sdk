@@ -1,27 +1,12 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AppsSort {
-
-	/**
-	 */
-	const CREATE_DATE = 'create_date';
-
-	/**
-	 */
-	const GROWTH_RATE = 'growth_rate';
-
-	/**
-	 */
-	const POPULAR_TODAY = 'popular_today';
-
-	/**
-	 */
-	const POPULAR_WEEK = 'popular_week';
-
-	/**
-	 */
-	const VISITORS = 'visitors';
+class AppsSort
+{
+	public const CREATE_DATE = 'create_date';
+	public const GROWTH_RATE = 'growth_rate';
+	public const POPULAR_TODAY = 'popular_today';
+	public const POPULAR_WEEK = 'popular_week';
+	public const VISITORS = 'visitors';
 }

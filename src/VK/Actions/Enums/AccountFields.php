@@ -1,31 +1,13 @@
 <?php
+
 namespace VK\Actions\Enums;
 
-/**
- */
-class AccountFields {
-
-	/**
-	 */
-	const COUNTRY = 'country';
-
-	/**
-	 */
-	const HTTPS_REQUIRED = 'https_required';
-
-	/**
-	 */
-	const INTRO = 'intro';
-
-	/**
-	 */
-	const LANG = 'lang';
-
-	/**
-	 */
-	const NO_WALL_REPLIES = 'no_wall_replies';
-
-	/**
-	 */
-	const OWN_POSTS_DEFAULT = 'own_posts_default';
+class AccountFields
+{
+	public const COUNTRY = 'country';
+	public const HTTPS_REQUIRED = 'https_required';
+	public const INTRO = 'intro';
+	public const LANG = 'lang';
+	public const NO_WALL_REPLIES = 'no_wall_replies';
+	public const OWN_POSTS_DEFAULT = 'own_posts_default';
 }

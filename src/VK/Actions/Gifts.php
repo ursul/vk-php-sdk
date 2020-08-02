@@ -1,28 +1,12 @@
 <?php
+
 namespace VK\Actions;
 
-use VK\Client\VKApiRequest;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 
-/**
- */
-class Gifts {
-
-	/**
-	 * @var VKApiRequest
-	 */
-	private $request;
-
-	/**
-	 * Gifts constructor.
-	 *
-	 * @param VKApiRequest $request
-	 */
-	public function __construct(VKApiRequest $request) {
-		$this->request = $request;
-	}
-
+class Gifts
+{
 	/**
 	 * Returns a list of user gifts.
 	 *
@@ -35,7 +19,8 @@ class Gifts {
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function get($access_token, array $params = []) {
+	public function get(string $access_token, array $params = [])
+	{
 		return $this->request->post('gifts.get', $access_token, $params);
 	}
 }

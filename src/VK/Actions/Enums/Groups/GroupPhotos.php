@@ -1,19 +1,10 @@
 <?php
+
 namespace VK\Actions\Enums\Groups;
 
-/**
- */
-class GroupPhotos {
-
-	/**
-	 */
-	const DISABLED = 0;
-
-	/**
-	 */
-	const LIMITED = 2;
-
-	/**
-	 */
-	const OPEN = 1;
+class GroupPhotos
+{
+	public const DISABLED = 0;
+	public const LIMITED = 2;
+	public const OPEN = 1;
 }
