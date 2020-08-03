@@ -96,7 +96,7 @@ class VKApiClient
 	
 	public function account(): Account
 	{
-		if (!$this->account)
+		if (!isset($this->account))
 		{
 			$this->account = new Account($this->request);
 		}
@@ -106,7 +106,7 @@ class VKApiClient
 	
 	public function ads(): Ads
 	{
-		if (!$this->ads)
+		if (!isset($this->ads))
 		{
 			$this->ads = new Ads($this->request);
 		}
@@ -116,7 +116,7 @@ class VKApiClient
 	
 	public function apps(): Apps
 	{
-		if (!$this->apps)
+		if (!isset($this->apps))
 		{
 			$this->apps = new Apps($this->request);
 		}
@@ -126,7 +126,7 @@ class VKApiClient
 	
 	public function auth(): Auth
 	{
-		if (!$this->auth)
+		if (!isset($this->auth))
 		{
 			$this->auth = new Auth($this->request);
 		}
@@ -136,7 +136,7 @@ class VKApiClient
 	
 	public function board(): Board
 	{
-		if (!$this->board)
+		if (!isset($this->board))
 		{
 			$this->board = new Board($this->request);
 		}
@@ -146,7 +146,7 @@ class VKApiClient
 	
 	public function database(): Database
 	{
-		if (!$this->database)
+		if (!isset($this->database))
 		{
 			$this->database = new Database($this->request);
 		}
@@ -156,7 +156,7 @@ class VKApiClient
 	
 	public function docs(): Docs
 	{
-		if (!$this->docs)
+		if (!isset($this->docs))
 		{
 			$this->docs = new Docs($this->request);
 		}
@@ -184,7 +184,7 @@ class VKApiClient
 	
 	public function fave(): Fave
 	{
-		if (!$this->fave)
+		if (!isset($this->fave))
 		{
 			$this->fave = new Fave($this->request);
 		}
@@ -194,7 +194,7 @@ class VKApiClient
 	
 	public function friends(): Friends
 	{
-		if (!$this->friends)
+		if (!isset($this->friends))
 		{
 			$this->friends = new Friends($this->request);
 		}
@@ -204,7 +204,7 @@ class VKApiClient
 	
 	public function gifts(): Gifts
 	{
-		if (!$this->gifts)
+		if (!isset($this->gifts))
 		{
 			$this->gifts = new Gifts($this->request);
 		}
@@ -214,7 +214,7 @@ class VKApiClient
 	
 	public function groups(): Groups
 	{
-		if (!$this->groups)
+		if (!isset($this->groups))
 		{
 			$this->groups = new Groups($this->request);
 		}
@@ -224,7 +224,7 @@ class VKApiClient
 	
 	public function leads(): Leads
 	{
-		if (!$this->leads)
+		if (!isset($this->leads))
 		{
 			$this->leads = new Leads($this->request);
 		}
@@ -234,7 +234,7 @@ class VKApiClient
 	
 	public function likes(): Likes
 	{
-		if (!$this->likes)
+		if (!isset($this->likes))
 		{
 			$this->likes = new Likes($this->request);
 		}
@@ -244,7 +244,7 @@ class VKApiClient
 	
 	public function market(): Market
 	{
-		if (!$this->market)
+		if (!isset($this->market))
 		{
 			$this->market = new Market($this->request);
 		}
@@ -254,7 +254,7 @@ class VKApiClient
 	
 	public function messages(): Messages
 	{
-		if (!$this->messages)
+		if (!isset($this->messages))
 		{
 			$this->messages = new Messages($this->request);
 		}
@@ -264,7 +264,7 @@ class VKApiClient
 	
 	public function newsfeed(): Newsfeed
 	{
-		if (!$this->newsfeed)
+		if (!isset($this->newsfeed))
 		{
 			$this->newsfeed = new Newsfeed($this->request);
 		}
@@ -274,7 +274,7 @@ class VKApiClient
 	
 	public function notes(): Notes
 	{
-		if (!$this->notes)
+		if (!isset($this->notes))
 		{
 			$this->notes = new Notes($this->request);
 		}
@@ -284,7 +284,7 @@ class VKApiClient
 	
 	public function notifications(): Notifications
 	{
-		if (!$this->notifications)
+		if (!isset($this->notifications))
 		{
 			$this->notifications = new Notifications($this->request);
 		}
@@ -294,7 +294,7 @@ class VKApiClient
 	
 	public function orders(): Orders
 	{
-		if (!$this->orders)
+		if (!isset($this->orders))
 		{
 			$this->orders = new Orders($this->request);
 		}
@@ -304,7 +304,7 @@ class VKApiClient
 	
 	public function pages(): Pages
 	{
-		if (!$this->pages)
+		if (!isset($this->pages))
 		{
 			$this->pages = new Pages($this->request);
 		}
@@ -314,7 +314,7 @@ class VKApiClient
 	
 	public function photos(): Photos
 	{
-		if (!$this->photos)
+		if (!isset($this->photos))
 		{
 			$this->photos = new Photos($this->request);
 		}
@@ -324,7 +324,7 @@ class VKApiClient
 	
 	public function places(): Places
 	{
-		if (!$this->places)
+		if (!isset($this->places))
 		{
 			$this->places = new Places($this->request);
 		}
@@ -334,7 +334,7 @@ class VKApiClient
 	
 	public function polls(): Polls
 	{
-		if (!$this->polls)
+		if (!isset($this->polls))
 		{
 			$this->polls = new Polls($this->request);
 		}
@@ -344,7 +344,7 @@ class VKApiClient
 	
 	public function search(): Search
 	{
-		if (!$this->search)
+		if (!isset($this->search))
 		{
 			$this->search = new Search($this->request);
 		}
@@ -354,7 +354,7 @@ class VKApiClient
 	
 	public function secure(): Secure
 	{
-		if (!$this->secure)
+		if (!isset($this->secure))
 		{
 			$this->secure = new Secure($this->request);
 		}
@@ -364,7 +364,7 @@ class VKApiClient
 	
 	public function stats(): Stats
 	{
-		if (!$this->stats)
+		if (!isset($this->stats))
 		{
 			$this->stats = new Stats($this->request);
 		}
@@ -374,7 +374,7 @@ class VKApiClient
 	
 	public function status(): Status
 	{
-		if (!$this->status)
+		if (!isset($this->status))
 		{
 			$this->status = new Status($this->request);
 		}
@@ -384,7 +384,7 @@ class VKApiClient
 	
 	public function storage(): Storage
 	{
-		if (!$this->storage)
+		if (!isset($this->storage))
 		{
 			$this->storage = new Storage($this->request);
 		}
@@ -394,7 +394,7 @@ class VKApiClient
 	
 	public function stories(): Stories
 	{
-		if (!$this->stories)
+		if (!isset($this->stories))
 		{
 			$this->stories = new Stories($this->request);
 		}
@@ -404,7 +404,7 @@ class VKApiClient
 	
 	public function streaming(): Streaming
 	{
-		if (!$this->streaming)
+		if (!isset($this->streaming))
 		{
 			$this->streaming = new Streaming($this->request);
 		}
@@ -414,7 +414,7 @@ class VKApiClient
 	
 	public function users(): Users
 	{
-		if (!$this->users)
+		if (!isset($this->users))
 		{
 			$this->users = new Users($this->request);
 		}
@@ -424,7 +424,7 @@ class VKApiClient
 	
 	public function utils(): Utils
 	{
-		if (!$this->utils)
+		if (!isset($this->utils))
 		{
 			$this->utils = new Utils($this->request);
 		}
@@ -434,7 +434,7 @@ class VKApiClient
 	
 	public function video(): Video
 	{
-		if (!$this->video)
+		if (!isset($this->video))
 		{
 			$this->video = new Video($this->request);
 		}
@@ -444,7 +444,7 @@ class VKApiClient
 	
 	public function wall(): Wall
 	{
-		if (!$this->wall)
+		if (!isset($this->wall))
 		{
 			$this->wall = new Wall($this->request);
 		}
@@ -454,7 +454,7 @@ class VKApiClient
 	
 	public function widgets(): Widgets
 	{
-		if (!$this->widgets)
+		if (!isset($this->widgets))
 		{
 			$this->widgets = new Widgets($this->request);
 		}
