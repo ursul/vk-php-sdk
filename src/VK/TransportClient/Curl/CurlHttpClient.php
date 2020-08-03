@@ -91,7 +91,7 @@ class CurlHttpClient implements TransportClient
 	{
 		$curl = curl_init($url);
 		
-		curl_setopt_array($curl, array_merge($this->initial_opts, $opts));
+		curl_setopt_array($curl, array_replace($this->initial_opts, $opts));
 		
 		$response = curl_exec($curl);
 		
