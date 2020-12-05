@@ -20,7 +20,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function ban(string $access_token, array $params = [])
+	public function ban(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.ban', $access_token, $params);
 	}
@@ -38,7 +38,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function changePassword(string $access_token, array $params = [])
+	public function changePassword(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.changePassword', $access_token, $params);
 	}
@@ -54,7 +54,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getActiveOffers(string $access_token, array $params = [])
+	public function getActiveOffers(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getActiveOffers', $access_token, $params);
 	}
@@ -69,7 +69,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getAppPermissions(string $access_token, array $params = [])
+	public function getAppPermissions(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getAppPermissions', $access_token, $params);
 	}
@@ -85,7 +85,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getBanned(string $access_token, array $params = [])
+	public function getBanned(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getBanned', $access_token, $params);
 	}
@@ -100,7 +100,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getCounters(string $access_token, array $params = [])
+	public function getCounters(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getCounters', $access_token, $params);
 	}
@@ -115,7 +115,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getInfo(string $access_token, array $params = [])
+	public function getInfo(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getInfo', $access_token, $params);
 	}
@@ -128,7 +128,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getProfileInfo(string $access_token)
+	public function getProfileInfo(string $access_token): mixed
 	{
 		return $this->request->post('account.getProfileInfo', $access_token);
 	}
@@ -143,7 +143,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function getPushSettings(string $access_token, array $params = [])
+	public function getPushSettings(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.getPushSettings', $access_token, $params);
 	}
@@ -164,7 +164,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function registerDevice(string $access_token, array $params = [])
+	public function registerDevice(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.registerDevice', $access_token, $params);
 	}
@@ -193,7 +193,7 @@ class Account extends Action
 	 * @throws VKApiInvalidAddressException Invalid screen name
 	 * @return mixed
 	 */
-	public function saveProfileInfo(string $access_token, array $params = [])
+	public function saveProfileInfo(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.saveProfileInfo', $access_token, $params);
 	}
@@ -209,7 +209,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setInfo(string $access_token, array $params = [])
+	public function setInfo(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.setInfo', $access_token, $params);
 	}
@@ -226,7 +226,7 @@ class Account extends Action
 	 * @throws VKApiAccessMenuException Access to the menu of the user denied
 	 * @return mixed
 	 */
-	public function setNameInMenu(string $access_token, array $params = [])
+	public function setNameInMenu(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.setNameInMenu', $access_token, $params);
 	}
@@ -239,7 +239,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setOffline(string $access_token)
+	public function setOffline(string $access_token): mixed
 	{
 		return $this->request->post('account.setOffline', $access_token);
 	}
@@ -254,7 +254,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setOnline(string $access_token, array $params = [])
+	public function setOnline(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.setOnline', $access_token, $params);
 	}
@@ -272,7 +272,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setPushSettings(string $access_token, array $params = [])
+	public function setPushSettings(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.setPushSettings', $access_token, $params);
 	}
@@ -290,7 +290,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function setSilenceMode(string $access_token, array $params = [])
+	public function setSilenceMode(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.setSilenceMode', $access_token, $params);
 	}
@@ -303,7 +303,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unban(string $access_token, array $params = [])
+	public function unban(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.unban', $access_token, $params);
 	}
@@ -319,7 +319,7 @@ class Account extends Action
 	 * @throws VKApiException
 	 * @return mixed
 	 */
-	public function unregisterDevice(string $access_token, array $params = [])
+	public function unregisterDevice(string $access_token, array $params = []): mixed
 	{
 		return $this->request->post('account.unregisterDevice', $access_token, $params);
 	}
