@@ -6,7 +6,7 @@
     "homepage": "https://github.com/ursul/vk-php-sdk",
     "license": "MIT",
     "require": {
-        "php": "^7.4",
+        "php": "^8.0",
         "ext-curl": "*",
         "ext-json": "*"
     },

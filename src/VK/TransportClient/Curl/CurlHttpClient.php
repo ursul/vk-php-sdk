@@ -172,7 +172,7 @@ class CurlHttpClient implements TransportClient
 		$http_status = 0;
 		foreach ($header_components as $line)
 		{
-			if (strpos($line, ': ') === false)
+			if (!str_contains($line, ': '))
 			{
 				$http_status = $this->getHttpStatus($line);
 			}

@@ -169,7 +169,6 @@ class VKApiClient
 	 *
 	 * @param string $access_token
 	 * @param array $params
-	 * - @var string code: VKScript code.
 	 *
 	 * @return mixed
 	 * @throws VKApiException
@@ -177,7 +176,7 @@ class VKApiClient
 	 * @throws VkApiExecuteCodeCompilationException
 	 * @throws VkApiExecuteCodeExecutionException
 	 */
-	public function execute($access_token, array $params = [])
+	public function execute(string $access_token, array $params = [])
 	{
 		return $this->request->post('execute', $access_token, $params);
 	}
