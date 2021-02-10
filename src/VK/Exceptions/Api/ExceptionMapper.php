@@ -10,86 +10,57 @@ class ExceptionMapper
 {
 	public static function parse(VkApiError $error): Exception
 	{
-		switch ($error->getErrorCode())
+		return match ($error->getErrorCode())
 		{
-			case 1:
-				return new VKApiUnknownException($error);
-			case 2:
-				return new VKApiDisabledException($error);
-			case 3:
-				return new VKApiMethodException($error);
-			case 4:
-				return new VKApiSignatureException($error);
-			case 5:
-				return new VKApiAuthException($error);
-			case 6:
-				return new VKApiTooManyException($error);
-			case 7:
-				return new VKApiPermissionException($error);
-			case 8:
-				return new VKApiRequestException($error);
-			case 9:
-				return new VKApiFloodException($error);
-			case 10:
-				return new VKApiServerException($error);
-			case 11:
-				return new VKApiEnabledInTestException($error);
-			case 12:
-				return new VkApiExecuteCodeCompilationException($error);
-			case 13:
-				return new VkApiExecuteCodeExecutionException($error);
-			case 14:
-				return new VKApiCaptchaException($error);
-			case 15:
-				return new VKApiAccessException($error);
-			case 16:
-				return new VKApiAuthHttpsException($error);
-			case 17:
-				return new VKApiAuthValidationException($error);
-			case 18:
-				return new VKApiUserDeletedException($error);
-			case 20:
-				return new VKApiMethodPermissionException($error);
-			case 21:
-				return new VKApiMethodAdsException($error);
-			case 23:
-				return new VKApiMethodDisabledException($error);
-			case 24:
-				return new VKApiNeedConfirmationException($error);
-			case 25:
-				return new VKApiNeedTokenConfirmationException($error);
-			case 27:
-				return new VKApiGroupAuthException($error);
-			case 28:
-				return new VKApiAppAuthException($error);
-			case 29:
-				return new VKApiRateLimitException($error);
-			case 30:
-				return new VKApiPrivateProfileException($error);
-			case 100:
-				return new VKApiParamException($error);
-			case 101:
-				return new VKApiParamApiIdException($error);
-			case 113:
-				return new VKApiParamUserIdException($error);
-			case 150:
-				return new VKApiParamTimestampException($error);
-			case 200:
-				return new VKApiAccessAlbumException($error);
-			case 201:
-				return new VKApiAccessAudioException($error);
-			case 203:
-				return new VKApiAccessGroupException($error);
-			case 300:
-				return new VKApiAlbumFullException($error);
-			case 500:
-				return new VKApiVotesPermissionException($error);
-			case 600:
-				return new VKApiAdsPermissionException($error);
-			case 603:
-				return new VKApiAdsSpecificException($error);
-			default:
-				return new VKApiException($error->getErrorCode(), $error->getErrorMsg(), $error);
-		}
+			1 => new VKApiUnknownException($error),
+			2 => new VKApiDisabledException($error),
+			3 => new VKApiMethodException($error),
+			4 => new VKApiSignatureException($error),
+			5 => new VKApiAuthException($error),
+			6 => new VKApiTooManyException($error),
+			7 => new VKApiPermissionException($error),
+			8 => new VKApiRequestException($error),
+			9 => new VKApiFloodException($error),
+			10 => new VKApiServerException($error),
+			11 => new VKApiEnabledInTestException($error),
+			12 => new VkApiExecuteCodeCompilationException($error),
+			13 => new VkApiExecuteCodeExecutionException($error),
+			14 => new VKApiCaptchaException($error),
+			15 => new VKApiAccessException($error),
+			16 => new VKApiAuthHttpsException($error),
+			17 => new VKApiAuthValidationException($error),
+			18 => new VKApiUserDeletedException($error),
+			20 => new VKApiMethodPermissionException($error),
+			21 => new VKApiMethodAdsException($error),
+			23 => new VKApiMethodDisabledException($error),
+			24 => new VKApiNeedConfirmationException($error),
+			25 => new VKApiNeedTokenConfirmationException($error),
+			27 => new VKApiGroupAuthException($error),
+			28 => new VKApiAppAuthException($error),
+			29 => new VKApiRateLimitException($error),
+			30 => new VKApiPrivateProfileException($error),
+			100 => new VKApiParamException($error),
+			101 => new VKApiParamApiIdException($error),
+			113 => new VKApiParamUserIdException($error),
+			150 => new VKApiParamTimestampException($error),
+			200 => new VKApiAccessAlbumException($error),
+			201 => new VKApiAccessAudioException($error),
+			203 => new VKApiAccessGroupException($error),
+			214 => new VKApiWallAddPostException($error),
+			219 => new VKApiWallAdsPublishedException($error),
+			220 => new VKApiWallTooManyRecipientsException($error),
+			222 => new VKApiWallLinksForbiddenException($error),
+			224 => new VKApiWallAdsPostLimitReachedException($error),
+			300 => new VKApiAlbumFullException($error),
+			500 => new VKApiVotesPermissionException($error),
+			600 => new VKApiAdsPermissionException($error),
+			603 => new VKApiAdsSpecificException($error),
+			
+			default => new VKApiException(
+				$error->getErrorCode(),
+				$error->getErrorMsg(),
+				$error
+			),
+		};
 	}
 }
