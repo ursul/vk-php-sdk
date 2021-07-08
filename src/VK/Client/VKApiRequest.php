@@ -5,6 +5,7 @@ namespace VK\Client;
 use Exception;
 use JsonException;
 use VK\Exceptions\Api\ExceptionMapper;
+use VK\Exceptions\Api\VKApiCaptchaException;
 use VK\Exceptions\VKApiException;
 use VK\Exceptions\VKClientException;
 use VK\TransportClient\Curl\CurlHttpClient;
@@ -73,7 +74,39 @@ class VKApiRequest
 			throw new VKClientException($e);
 		}
 		
-		return $this->parseResponse($response);
+		$parsedResponse = $this->parseResponse($response);
+		
+		if ($parsedResponse instanceof VKApiError)
+		{
+			if (function_exists('recognizeCaptcha'))
+			{
+				$captchaImg = $parsedResponse->getCaptchaImg();
+				$captchaSid = $parsedResponse->getCaptchaSid();
+				$captchaKey = recognizeCaptcha($captchaImg);
+				
+				$params = array_merge_recursive($params, [
+					'captcha_key' => $captchaKey,
+					'captcha_sid' => $captchaSid,
+				]);
+				
+				try
+				{
+					$response = $this->http_client->post($url, $params);
+				}
+				catch (TransportRequestException $e)
+				{
+					throw new VKClientException($e);
+				}
+				
+				$parsedResponse = $this->parseResponse($response);
+			}
+			else
+			{
+				throw ExceptionMapper::parse($parsedResponse);
+			}
+		}
+		
+		return $parsedResponse;
 	}
 	
 	/**
@@ -122,7 +155,16 @@ class VKApiRequest
 		{
 			$error = $decode_body[static::KEY_ERROR];
 			$api_error = new VKApiError($error);
-			throw ExceptionMapper::parse($api_error);
+			$api_exception = ExceptionMapper::parse($api_error);
+			
+			if ($api_exception instanceof VKApiCaptchaException)
+			{
+				return $api_error;
+			}
+			else
+			{
+				throw $api_exception;
+			}
 		}
 		
 		return $decode_body[static::KEY_RESPONSE] ?? $decode_body;
